@@ -1,3 +1,5 @@
+실행 - cmd - 'mysql -u root -p' 입력 - 비밀번호 입력 
+
 show databases(DB확인)
 
 information_schema 
