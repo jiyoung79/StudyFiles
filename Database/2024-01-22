@@ -60,6 +60,7 @@ column 삭제 : alter table 테이블명 drop 컬럼명
 
 [ column 값 ]
 삽입	: insert into 테이블명(열1,열2...) values(값1,값2...);
+	  같은 테이블에 값을 더 추가할때는 'insert into 테이블명 values(값1, 값2 ...);'
 수정	: update 테이블명 set 열이름=값,열이름=값 where 열이름=값;
 삭제	: delete from 테이블명 where 열이름=값;
 조회	: select * from 테이블명;
