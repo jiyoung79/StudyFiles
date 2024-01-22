@@ -1,6 +1,20 @@
 실행 - cmd - 'mysql -u root -p' 입력 - 비밀번호 입력 
-
+DB조회 : show databases;
+DB위치 지정 : use mysql;
+테이블 확인 : show tables;
+	     select * from user;
+DB 생성
+db생성(TUI) : create database testdb;
+	      show databases;
+table 생성(TUI) : use testdb;
+		show tables;
 show databases(DB확인)
+
+
+
+--------------------------------------------
+
+
 
 information_schema 
 - 테이블, 컬럼, 권한 등 메타데이터가 저장
