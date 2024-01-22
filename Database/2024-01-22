@@ -1,4 +1,14 @@
-접속하기 : 실행 - cmd - 'mysql -u 유저명 -p' 입력 - 비밀번호 입력 
+[ 접속하기]
+실행 - cmd - 'mysql -u 유저명 -p' 입력 - 비밀번호 입력 
+
+[ 환경변수 설정 ]
+실행창->sysdm.cpl -> 고급->환경변수 -> 시스템변수 , path->편집 ->새로만들기 -> 'C:\Program Files\MySQL\MySQL Server 8.0\bin'경로 추가 -> 확인
+
+[ MYSQL80 서비스 접속 ]
+TUI : 실행창 -> cmd -> mysql -u root -p
+QUI 접속 : workbench -> Local접속세션버튼 클릭
+
+
 DB조회 : show databases;
 DB위치 지정 : use mysql;
 테이블 확인 : show tables;
