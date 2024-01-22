@@ -1,66 +1,67 @@
-show databases(DB확인)<br>
-<br>
-information_schema<br> 
-- 테이블, 컬럼, 권한 등 메타데이터가 저장<br>
-<br>
-performance_schema <br>
-- MYSQL 서버의 성능과 관련된 정보가 저장<br>
-- ex 스레드 정보, Lock Table, 쿼리 실행시간 등 ,,,<br>
-<br>
-mysql <br>
-- MYSQL 서버 자체를 관리하기 위한 스키마<br>
-- 사용자 정보, 권한 및 다양한 설정정보 저장 <br>
-<br>
-sys<br>
-- Mysql 8.x 부터 도입된 DB<br>
-- 성능 모니터링 및 최적화를 위한 도구와 뷰를 제공<br>
-<br>
-------------------------------------------------------<br>
-<br>
-[ SQL의 분류 ]<br>
-DDL <br>
-- Data Definition Language<br>
-- 데이터베이스 개체를 생성/삭제/변경하는 역할<br>
-- CREATE, DROP, ALTER ...<br>
+show databases(DB확인)
 
-DML<br>
-- Data Manipulation Language<br>
-- 데이터를 조작(선택, 삽입, 수정, 삭제) 하는데 사용되는 언어<br>
-- SELECT, INSERT, UPDATE, DELETE ...<br>
-<br>
-DCL<br>
-- Data Control Language<br>
-- 권한부여/철회에 사용되는 구문<br>
-- GRANT/REVOKE/DENY<br>
-<br>
-<br>
-<br>
-DB 생성 : create database 데이터베이스명;<br>
-<br>
-제약조건<br>
-pk(primary key) : null 을 허용하지 않음<br>
-<br>
-tbl 구조 확인 : desc 테이블명<br>
-<br>
-[ 참고 - create ]<br>
-user testdb;<br>
-create talbe 테이블명(<br>
-	컬럼명 자료형 제약조건,<br>
-	컬럼명 자료형 제약조건,<br>
-	컬럼명 자료형 제약조건 );<br>
-<br>
-<br>
-[ tbl 구조 변경하기 ]<br>
-column 추가 : alter table 테이블명 add column 컬럼명 자료형 제약조건<br>
-column 수정 : alter table 테이블명 change column 기존컬럼명 변경컬럼명 자료형 제약조건<br>
-column 삭제 : alter table 테이블명 drop 컬럼명<br>
-<br>
-<br>
-[ column 값 ]<br>
-삽입	: insert into 테이블명(열1,열2...) values(값1,값2...);<br>
-수정	: update 테이블명 set 열이름=값,열이름=값 where 열이름=값;<br>
-삭제	: delete from 테이블명 where 열이름=값;<br>
-조회	: select * from 테이블명;<br>
+information_schema 
+- 테이블, 컬럼, 권한 등 메타데이터가 저장
+
+performance_schema 
+- MYSQL 서버의 성능과 관련된 정보가 저장
+- ex 스레드 정보, Lock Table, 쿼리 실행시간 등 ,,,
+
+mysql 
+- MYSQL 서버 자체를 관리하기 위한 스키마
+- 사용자 정보, 권한 및 다양한 설정정보 저장 
+
+sys
+- Mysql 8.x 부터 도입된 DB
+- 성능 모니터링 및 최적화를 위한 도구와 뷰를 제공
+
+------------------------------------------------------
+
+[ SQL의 분류 ]
+DDL 
+- Data Definition Language
+- 데이터베이스 개체를 생성/삭제/변경하는 역할
+- CREATE, DROP, ALTER ...
+
+DML
+- Data Manipulation Language
+- 데이터를 조작(선택, 삽입, 수정, 삭제) 하는데 사용되는 언어
+- SELECT, INSERT, UPDATE, DELETE ...
+
+DCL
+- Data Control Language
+- 권한부여/철회에 사용되는 구문
+- GRANT/REVOKE/DENY
+
+
+
+DB 생성 : create database 데이터베이스명;
+
+제약조건
+pk(primary key) : null 을 허용하지 않음
+
+tbl 구조 확인 : desc 테이블명
+
+[ 참고 - create ]
+user testdb;
+create talbe 테이블명(
+	컬럼명 자료형 제약조건,
+	컬럼명 자료형 제약조건,
+	컬럼명 자료형 제약조건 );
+
+
+[ tbl 구조 변경하기 ]
+column 추가 : alter table 테이블명 add column 컬럼명 자료형 제약조건
+column 수정 : alter table 테이블명 change column 기존컬럼명 변경컬럼명 자료형 제약조건
+column 삭제 : alter table 테이블명 drop 컬럼명
+
+
+[ column 값 ]
+삽입	: insert into 테이블명(열1,열2...) values(값1,값2...);
+수정	: update 테이블명 set 열이름=값,열이름=값 where 열이름=값;
+삭제	: delete from 테이블명 where 열이름=값;
+조회	: select * from 테이블명;
+
 
 
 
