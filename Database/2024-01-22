@@ -1,4 +1,4 @@
-실행 - cmd - 'mysql -u root -p' 입력 - 비밀번호 입력 
+접속하기 : 실행 - cmd - 'mysql -u 유저명 -p' 입력 - 비밀번호 입력 
 DB조회 : show databases;
 DB위치 지정 : use mysql;
 테이블 확인 : show tables;
