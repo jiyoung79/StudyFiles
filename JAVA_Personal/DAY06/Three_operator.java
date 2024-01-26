@@ -7,3 +7,11 @@ public class Three_operator {
 	}
 
 }
+
+/*
+Console
+
+성인입니다
+
+
+*/
