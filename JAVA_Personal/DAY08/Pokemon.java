@@ -27,3 +27,35 @@ public class Pokemon {
 	}
 
 }
+
+
+/*
+Console
+이 셋 중에 랜덤으로 나옴
+
+☆★Random choosing Pokemon☆★
+1. 피카츄
+2. 꼬부기
+3. 이상해씨
+선택된 번호:3
+이상해씨가 선택되었습니다.
+
+☆★Random choosing Pokemon☆★
+1. 피카츄
+2. 꼬부기
+3. 이상해씨
+선택된 번호:2
+꼬부기가 선택되었습니다.
+
+☆★Random choosing Pokemon☆★
+1. 피카츄
+2. 꼬부기
+3. 이상해씨
+선택된 번호:1
+피카츄가 선택되었습니다.
+
+
+
+
+*/
+
