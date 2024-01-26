@@ -13,3 +13,12 @@ public class TrafficLight {
 		 System.out.println(result);
 	}
 }
+
+/*
+Console
+
+신호등 프로그램
+신호를 입력하세요~
+빨간불:1, 초록불:2, 노란불:3
+
+*/
