@@ -19,3 +19,16 @@ public class Logic_operator {
 	}
 
 }
+
+/*
+Console
+
+false
+true
+true
+true
+true
+false
+false
+
+*/
