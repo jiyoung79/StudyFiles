@@ -10,3 +10,11 @@ public class Sign_operator {
 	}
 
 }
+
+/*
+Console
+
+1
+-2
+
+*/
