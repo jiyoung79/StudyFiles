@@ -7,3 +7,10 @@ public class If_true {
 		}
 	}
 }
+
+/*
+Console
+
+항상 참입니다
+
+*/
