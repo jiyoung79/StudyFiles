@@ -29,4 +29,23 @@ public class UpdownGame {
 
 }
 
+/*
+Console
+
+숫자 입력:50
+Up!
+숫자 입력:80
+Down!
+숫자 입력:70
+Down!
+숫자 입력:60
+Down!
+숫자 입력:55
+Down!
+숫자 입력:52
+Up!
+숫자 입력:53
+정답입니다!
+
+*/
 
