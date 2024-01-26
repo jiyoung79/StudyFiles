@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+   
+   <style>
+    @font-face {
+        font-family: "NanumGothicCoding";
+        src: url('./font/NanumGothicCoding-Regular.ttf');
+        font-style: normal;
+    }
+        *{}
+        body{}
+        a{text-decoration: none; color: black;}
+        ul{list-style: none; margin: 0px; padding: 0px;}
+
+        .wrapper{}
+
+        .wrapper>header{}
+        .wrapper>header>.top-header{}
+
+        .wrapper>header>nav{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .wrapper>header>nav>.menu{
+            border: 1px solid white;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            height: 75px;
+
+        }
+        .wrapper>header>nav>.menu>li{
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid white;
+            text-align: center;
+            position: relative;
+            border-bottom: 1px solid lightgrey;
+
+        }
+        .wrapper>header>nav>.menu>li>a{
+            border: 1px solid white;
+            display: block;
+            font-size: large;
+            font-weight: 600;
+
+        }
+        .wrapper>header>nav>.menu>li>.submenu{
+            /* border: 1px solid white; */
+            display: none;
+            position: absolute;
+            width: 200px;
+            left: 0px;
+            top: 50px;
+            font-size: .9rem;
+        }
+        .wrapper>header>nav>.menu>li>.submenu>li{
+            height: 35px;
+            /* border: 1px solid; */
+        }
+        /* .wrapper>header>nav>.menu>li>.submenu>li>a{
+            display: block; 
+            width: auto;
+        } */
+        .wrapper>header>nav>.menu:hover .submenu{
+            display: block;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="top-header"></div>
+            <nav>
+                <ul class="menu"  style="font-family: 'NanumGothicCoding';">
+                    <li>
+                        <a href="">메뉴소개</a>
+                        <ul class="submenu" style="font-family: 'NanumGothicCoding';">
+                            <li><a href="">샌드위치</a></li>
+                            <li><a href="">랩, 기타</a></li>
+                            <li><a href="">샐러드</a></li>
+                            <li><a href="">아침메뉴</a></li>
+                            <li><a href="">스마일 썹</a></li>
+                            <li><a href="">단체메뉴</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">이용방법</a>
+                        <ul class="submenu" style="font-family: 'NanumGothicCoding';">
+                            <li><a href="">써브웨이 이용방법</a></li>
+                            <li><a href="">단체메뉴 이용방법</a></li>
+                            <li><a href="">신선한 재료 소개</a></li>
+                            <li><a href="">App 이용방법</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">새소식</a>
+                        <ul class="submenu" style="font-family: 'NanumGothicCoding';">
+                            <li><a href="">이벤트, 프로모션</a></li>
+                            <li><a href="">뉴스, 공지사항</a></li>
+                            <li><a href="">광고영상</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">써브웨이</a>
+                        <ul class="submenu" style="font-family: 'NanumGothicCoding';">
+                            <li><a href="">써브웨이 역사</a></li>
+                            <li><a href="">써브웨이 약속</a></li>
+                            <li><a href="">샌드위치 아티스트 지원</a></li>
+                            <li><a href="">매장찾기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">가맹점</a>
+                        <ul class="submenu" style="font-family: 'NanumGothicCoding';">
+                            <li><a href="">써브웨이 프랜차이즈</a></li>
+                            <li><a href="">가맹관련 FAQ</a></li>
+                            <li><a href="">가맹신청, 문의</a></li>
+                            <li><a href="">지사안내</a></li>
+                            <li><a href="">사업설명회</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">온라인주문</a>
+                        <ul class="submenu" style="font-family: 'NanumGothicCoding';">
+                            <li><a href="">FAST-SUB</a></li>
+                            <li><a href="">HOME-SUB</a></li>
+                            <li><a href="">단체주문</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section></section>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>
