@@ -27,3 +27,26 @@ public class If_if {
 	}
 
 }
+
+/*
+Console
+
+id,pw 모두 일치할 때
+아이디를 입력해주세요 : java
+id 일치!
+비밀번호를 입력해주세요 : abc123
+password 일치
+로그인 성공!
+
+id는 일치하고 pw는 불일치 할 때
+아이디를 입력해주세요 : java
+id 일치!
+비밀번호를 입력해주세요 : 123
+password 불일치
+
+
+id가 불일치 할 때
+아이디를 입력해주세요 : ji
+ID 불일치
+
+*/
