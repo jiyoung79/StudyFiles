@@ -24,3 +24,17 @@ public class VarTest {
 	}
 
 }
+
+
+/*
+Console
+
+
+100
+3.14
+3.14
+c
+hello
+true
+*/
+
