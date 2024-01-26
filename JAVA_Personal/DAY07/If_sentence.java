@@ -10,3 +10,11 @@ public class If_sentence {
 	}
 
 }
+
+/*
+Console
+
+a는 3보다 큽니다.
+검사가 끝났습니다.
+
+*/
