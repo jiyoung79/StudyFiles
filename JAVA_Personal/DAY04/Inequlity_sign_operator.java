@@ -15,3 +15,13 @@ public class Inequlity_sign_operator {
 	}
 
 }
+
+/*
+Console
+
+true
+false
+true
+true
+
+*/
