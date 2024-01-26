@@ -17,3 +17,13 @@ public class Equality_sign_operator {
 	}
 
 }
+
+/*
+Console
+
+false
+true
+true
+true
+
+*/
