@@ -16,3 +16,15 @@ public class Hello {
 	}
 
 }
+
+/*
+Console
+
+true
+true
+true
+true
+true
+
+
+*/
