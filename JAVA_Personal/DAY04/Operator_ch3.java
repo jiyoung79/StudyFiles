@@ -13,3 +13,14 @@ public class Operator_ch3 {
 	}
 
 }
+
+/*
+Console
+
+1
+2
+3
+3
+4
+
+*/
