@@ -18,3 +18,13 @@ public class Assign_operator {
 		System.out.println(a);
 	}
 }
+
+/*
+Console
+
+3
+4
+2
+4
+
+*/
