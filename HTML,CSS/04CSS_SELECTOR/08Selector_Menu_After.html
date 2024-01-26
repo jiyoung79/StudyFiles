@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrapper{}
+        .wrapper>header{}
+        .wrapper>header>.top-header{
+            width: 100%;
+            display: flex;
+            justify-content: right;
+        }
+        .wrapper>header>.top-header>ul{
+            list-style: none; margin: 0px; padding: 0px;
+            display: flex;
+        }
+        .wrapper>header>.top-header>ul>li{
+            width: 100px;
+            height: 35px;
+            line-height: 35px;
+            /* border: 1px solid; */
+            text-align: center;
+            position: relative;
+        }
+        .wrapper>header>.top-header>ul>li>a{
+            text-decoration: none;
+            color: black;
+            font-size: 0.8rem;
+            display: block;
+        }
+        .wrapper>header>.top-header>ul>li::after{
+            content: '|';
+            position: absolute;
+            left: 100%;
+            top: 0;
+        }
+        .wrapper>header>.top-header>ul>li:last-child::after{
+            content: "";
+        }
+        .wrapper>header>nav{
+
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">                                
+        <header>
+            <div class="top-header">
+                <ul>
+                    <li><a href="">User1</a></li>
+                    <li><a href="">나의메뉴</a></li>
+                    <li><a href="">고객센터</a></li>
+                    <li><a href="">로그아웃</a></li>
+                </ul>
+
+            </div>
+            <nav></nav>
+        </header>
+        <main>
+            <section></section>
+        </main>
+        <footer></footer>
+    </div>
+
+</body>
+</html>
