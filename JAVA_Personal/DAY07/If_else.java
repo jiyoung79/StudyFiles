@@ -14,3 +14,12 @@ public class If_else {
 		System.out.println("결제를 진행해 주세요.");
 	}
 }
+
+/*
+Console
+
+미성년자입니다.
+청소년 요금이 적용됩니다.
+결제를 진행해 주세요.
+
+*/
