@@ -13,3 +13,11 @@ public class While2 {
 	}
 
 }
+
+/*
+Console
+
+프로그램 종료
+
+i가 10 초과이면 계속 반복
+*/
