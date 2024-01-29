@@ -1,6 +1,8 @@
 # Database
 <hr>
 
-# DDL DCL DML 정리
-# 2024-01-22
-# 2024-01-23
+# 01
+# 02
+# 03 DDL DCL DML 정리
+# 04 DB 설계(erd)
+# 05 외래키지정 및 select
