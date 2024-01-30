@@ -108,8 +108,9 @@ create table 복사한 새테이블명 like 복사할 기존테이블명;
 insert into 복사한 새테이블명 select * from 복사할 기존테이블명 where 복사할 데이터값;
 
 --------------------------------------------------------------------------------------------
+[ GROUP BY ]
 
-01) select group by : group by 는 동일한 값을 가진 컬럼을 기준으로 그룹별 연산을 적용한다.
+1) select group by : group by 는 동일한 값을 가진 컬럼을 기준으로 그룹별 연산을 적용한다.
 				  특정 컬럼들을 그룹화, 집계함수를 사용할 수 있음
 총합
 select 컬럼명, sum(더할 컬럼명) from 테이블명 group by 컬럼명;
@@ -141,7 +142,7 @@ select *from usertbl where height = (select min(height) from usertbl);
 select *from usertbl where height = (select max(height) from usertbl) or height = (select min(height) from usertbl);
 
 
-02 select group by + having : having 은 group by 절에 의해 생성된 결과값 중 원하는 조건에 부합하는 데이터만 보고자 할 때 사용
+2 select group by + having : having 은 group by 절에 의해 생성된 결과값 중 원하는 조건에 부합하는 데이터만 보고자 할 때 사용
 select 컬럼명, sum(더할 컬럼명) as '이름지정' from 테이블명 group by 컬럼명 having sum(더할컬럼명) > 5
 		->생성된 결과값							->원하는 조건(앞에서 생성된 결과값)
 
@@ -152,7 +153,7 @@ select userid, sum(amount) as '구매총량' from buytbl group by userid having 
 select userid, truncate(avg(amount*price), 2) as '구매평균액' from buytbl group by userid having truncate(avg(amount*price), 2); -- 집계결과에 대한 조건절
 
 
-03 select + group by + rollup : 그룹별로 합계를 한 번에 구할 때 사용
+3 select + group by + rollup : 그룹별로 합계를 한 번에 구할 때 사용
 				group by 뒤 기준들의 순서에 따라 with rollup의 결과도 달라짐
 ex)
 select num,groupname, sum(price*amount) from buytbl group by groupname, num with rollup;
