@@ -9,3 +9,5 @@
 # 04 DB 설계(erd)
 # 05 외래키지정 및 select
 # 06 Constraint
+# 07 변수
+# 08 내장함수
