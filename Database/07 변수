@@ -48,11 +48,11 @@ from buytbl;
 3-1. 암시적 형변환
 
 select '100' + '200';		: 정수형으로 자동형변환		  = 300
-select concat('100','200');	: 문자로 처리			    = 100200
+select concat('100','200');	: 문자로 처리			   = 100200
 select concat(100,'200');	: 정수가 문자로 변환되어 처리	= 100200
-select 1 > '2mega';		: 정수인 2로 변환되어 비교	= 0(거짓)
-select 3 > '2MEGA';		: 정수인 2로 변환되어 비교	= 1(참)
-select 0 = 'mega2'		: 문자는 0으로 변환  		= 1(참)
+select 1 > '2mega';		: 정수인 2로 변환되어 비교	  = 0(거짓)
+select 3 > '2MEGA';		: 정수인 2로 변환되어 비교	  = 1(참)
+select 0 = 'mega2'		: 문자는 0으로 변환  	  = 1(참)
 
 3-2 실수 -> 정수형 변환
 select cast(avg(평균을 구할 값이름) as signed int) as '변경할 이름' from 테이블명;
