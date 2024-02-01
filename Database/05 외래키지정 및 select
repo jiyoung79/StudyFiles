@@ -124,9 +124,10 @@ select userid, sum(amount*price) as '구매총액' from buytbl group by userid;
 
 
 평균값
-select 컬럼명, truncate(값, 소숫점자리) avg(총합) as '이름지정' from 테이블명 group by 컬럼명;
+select 컬럼명, avg(총합을 나타내는 컬럼명) as '지정할 이름' from 테이블명 group by 컬럼명;
 
-
+- 소수점자리 지정
+select 컬럼명, truncate(값, 소숫점자리) avg(총합을 나타내는 컬럼명) as '지정할 이름' from 테이블명 group by 컬럼명;
 select userid, truncate(값, 소숫점자리) avg(amount*price) as '구매평균액' from buytbl group by userid;
 
 -max, min
