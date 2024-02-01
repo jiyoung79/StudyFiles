@@ -1,0 +1,113 @@
+[ 내장함수 ]
+
+1. concat(), concat_ws() : 문자열을 연결할 때 사용
+concat(문자열, 문자열)
+
+ex)
+select concat('hello', '-', 'world');
+select concat_ws("-", 'hello', 'world', 5, 6);	-- 구분자를 앞에 두어서 문자열 뒤에 - 가 나옴
+
+2. SubString() : 문자열의 일부를 추출할 때 사용
+select substring(문자열, 시작위치, 길이)
+
+ex)
+select substring("HELLO WORLD", 6); -- 6 index 부터 마지막 문자까지
+select substring("HELLO WORLD", 1, 7); -- 1 index 부터 7개 문자
+select substring_index("HELLO MY NAME IS JUNG", " ",3);
+
+select userid, substring_index(mDate, '-', 2) as '가입연월' from usertbl;
+
+3. length() : 문자열의 길이를 반환
+select length(문자열);
+
+ex)
+select length("Hello World");	-- 문자의 길이(갯수)
+select length(lastName) from classicmodels.employees;
+
+4. Lower(), Upper() : 대소문자 변환
+
+5. Trim() : 앞뒤 공백을 없애줌
+
+- Ltrim : 왼쪽 공백만 제거
+- Rtrim : 오른쪽 공백만 제거
+
+ex)
+select trim("       HELLO WORLD     ");
+
+6. bin, oct, hex 
+	bin : 2진수로 반환할 수 있는 함수
+	oct : 8진수로 반환할 수 있는 함수
+	hex : 16진수로 반환할 수 있는 함수
+
+7. reverse : 문자열의 위치를 반대로
+select reverse(문자열);
+
+8. space : 반복된 공백 문자열을 반환
+select 문자열 + space(공백반복횟수) + 문자열;
+
+ex)
+select 'SQL' + space(1) + 'Server' => SQL Server
+
+9. repeat : 지정한 회수만큼 문자열 반복
+select repeat(문자열,회수);
+
+ex)
+select repeat('TEST', 3); => TESTTESTTEST
+
+10. locate : 문자열에 찾으려는 값이 존재한다면 해당 위치를 반환
+select locate('찾는 문자열', '문자열');
+
+ex)
+select locate('in', 'moomin'); => 5
+
+11. format : 
+
+12. replace : 단어 단위로 대치
+select replace(문자열, 찾는 문자열, 대치할 문자열)
+
+ex)
+select replace('where we are', 'we', 'you');  => where you are
+
+13. 날짜관련 함수 생략
+
+select Year(mDate) from 테이블명;
+select month(mDate) from 테이블명;
+select day(mDate) from 테이블명;
+
+select now();
+select date(now());
+select curdate();
+select time(now());
+select curtime();
+
+
+ex.1)
+현재 날짜시간에서 연, 월, 일, 시, 분 , 초를 각각 추출해내고 다음과 같은 포맷팅으로 출력하세요
+-> YYYY#MM#DD-hh:mm:ss
+
+select date(now()), time(now());
+select concat(
+concat_ws("#", year(now()), month(now()), day(now())),
+'-', 
+time(now())) as '연월일시분초';
+
+ex.2)
+YYYY#MM#DD hh|mm|ss
+
+select replace(curdate(), '-', '#');
+select replace(curtime(),':','|');
+select concat(replace(curdate(), '-', '#'), " ", replace(curtime(),':','|')) as '현재시간';
+
+14. if
+select if(연산, '참일때 출력할 값', '거짓일 때 출력할 값');
+
+ex)
+키가 170이상이면 '170이상', 170미만이면 '170이하'로 표시
+
+select * from usertbl;
+select *, if(height>=170, "170이상", "170이하") from usertbl;
+
+
+
+
+
