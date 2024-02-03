@@ -195,11 +195,15 @@ create table 테이블명 (
 
 * 테이블 생성된 이후 만들기<br>
 
-    alter table 테이블명 add check (조건값);
+```
+alter table 테이블명 add check (조건값);
+```
 
 * 테이블 생성된 이후 check 제약 조건값 2개 이상 만들기<br>
 
-    alter table 테이블명 add constraint CHK_명 check(조건값1 AND 조건값2);
+```
+alter table 테이블명 add constraint CHK_명 check(조건값1 AND 조건값2);
+```
 
 <hr>
 
