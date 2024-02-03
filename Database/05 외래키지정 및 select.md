@@ -5,7 +5,6 @@
 * fk_외래키가 포함된 테이블_기본기가 포함된 테이블
 
 ```
-  ex)
 	fk_registration_student_id
 	fk_registration_lecture_id
 ```
