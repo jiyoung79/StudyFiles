@@ -12,10 +12,12 @@
 > table을 만들 때 pk에서 AI를 선택하면 적용됨<br>
 > 그 후 값을 넣어 출력하면 자동으로 순서 생성<br>
 
+#### ex) <br>
+
+> 
 ```
-ex)
-	insert into tbl_a(name) values('홍길동');
-	insert into tbl_a values(null, '김민수');
+insert into tbl_a(name) values('홍길동');
+insert into tbl_a values(null, '김민수');
 ```
 
 ```
