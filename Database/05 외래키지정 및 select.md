@@ -1,12 +1,14 @@
-workbench에서 외래키(fk)를 지정할 때
+# 외래키 지정<br>
 
-fk_외래키가 포함된 테이블_기본기가 포함된 테이블
+## workbench에서 외래키(fk)를 지정할 때<br>
 
-ex)
+* fk_외래키가 포함된 테이블_기본기가 포함된 테이블
+
+    ex)
 	fk_registration_student_id
 	fk_registration_lecture_id
 
---------------------------------------------------------------
+<hr>
 
 SELECT
 
