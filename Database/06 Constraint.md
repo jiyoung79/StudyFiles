@@ -139,7 +139,7 @@ on delete restrict;
 
 <br>
 
-> 테이블 만들 때 같이 만들기<br>
+* 테이블 만들 때 같이 만들기<br>
 
 ```
 create table 테이블명(
@@ -152,7 +152,7 @@ create table 테이블명(
 
 * 테이블 생성된 이후 만들기<br>
 
->    alter table 테이블명 add constraint uk명 unique(설정할 열이름);
+    alter table 테이블명 add constraint uk명 unique(설정할 열이름);
 
 *  unique 삭제하기<br>
 
@@ -192,6 +192,7 @@ create table 테이블명 (
     constraint CHK_명 check (조건값1 AND 조건값2)
 );
 ```
+
 * 테이블 생성된 이후 만들기<br>
 
     alter table 테이블명 add check (조건값);
