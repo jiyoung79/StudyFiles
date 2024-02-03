@@ -14,20 +14,22 @@
 
 ## 1-2. DDL 종류<br>
 
-'CREATE : 테이블을 생성하는 역할<br>
+`CREATE : 테이블을 생성하는 역할<br>
 ALTER	: 테이블의 구조를 수정하는 역할<br>
 DROP : 테이블을 삭제하는 역할<br>
-RENAME : 테이블을 이름을 변경하는 역할'<br>
+RENAME : 테이블을 이름을 변경하는 역할`
+
 <br>
 
-'ALTER : 컬럼 변경 문법<br>
+`ALTER : 컬럼 변경 문법<br>
 ADD COLUMN : 컬럼을 추가하는 역할<br>
 DROP COLUMN	: 컬럼을 삭제하는 역할<br>
 MODIFY COLUMN	: 컬럼을 수정하는 역할<br>
-RENAME COLUMN	: 컬럼 이름을 변경하는 역할'<br>
+RENAME COLUMN	: 컬럼 이름을 변경하는 역할`<br>
+
 <hr>
 
-## 2.DML 이란?<br>
+## 2. DML 이란?<br>
 * 데이터베이스의 내부 데이터를 관리하기 위한 언어이다. 데이터를 조회, 추가, 변경, 삭제 등의 작업을 수행하기 위해 사용된다.<br>
 <br>
 
