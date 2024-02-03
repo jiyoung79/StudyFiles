@@ -114,54 +114,60 @@ select * from usertbl where name like '김_'; -- _ 개수만큼의 길이 제한
 ### 1-9. 복사(테이블 복사)<br>
 
 * 구조 + 값 복사()<br>
-    create table 복사한 새테이블명(select * from 복사할 기존테이블명);<br>
+> create table 복사한 새테이블명(select * from 복사할 기존테이블명);<br>
 	이 때 pk, fk는 원본으로부터 복사가 되지 않음<br>
  <br>
-    create table 복사한 새테이블명(select 열이름1, 열이름2, ... from 복사할 기존테이블명);<br>
+> create table 복사한 새테이블명(select 열이름1, 열이름2, ... from 복사할 기존테이블명);<br>
 	=> 기존 테이블명에서 복사하고싶은 열만 복사<br>
 <br>
 
 * 구조만 복사(값X, PK O, FK X, Index O)<br>
-    create table 복사한 새테이블명 like 복사할 기존테이블명;<br>
+> create table 복사한 새테이블명 like 복사할 기존테이블명;<br>
 
 * 데이터만 복사<br>
-    insert into 복사한 새테이블명 select * from 복사할 기존테이블명 where 복사할 데이터값;<br>
+> insert into 복사한 새테이블명 select * from 복사할 기존테이블명 where 복사할 데이터값;<br>
 
 --------------------------------------------------------------------------------------------
-[ GROUP BY ]
+## 2. GROUP BY<br>
 
-1) select group by : group by 는 동일한 값을 가진 컬럼을 기준으로 그룹별 연산을 적용한다.
-				  특정 컬럼들을 그룹화, 집계함수를 사용할 수 있음
-총합
-select 컬럼명, sum(더할 컬럼명) from 테이블명 group by 컬럼명;
+### 2-1. select group by<br>
 
+> group by 는 동일한 값을 가진 컬럼을 기준으로 그룹별 연산을 적용한다.
+> 특정 컬럼들을 그룹화, 집계함수를 사용할 수 있음
+
+* 총합
+>     select 컬럼명, sum(더할 컬럼명) from 테이블명 group by 컬럼명;
+
+```
 ex)
--- userid 별 amount 총합(sum)
+- userid 별 amount 총합(sum)
 select userid, sum(amount) from buytbl group by userid;
 
--- userid 별 amount*price의 총합(sum)
+- userid 별 amount*price의 총합(sum)
 select userid, sum(amount*price) as '구매총액' from buytbl group by userid;
+```
 
+* 평균값
+>    select avg(평균을 구하고싶은 컬럼명) from 테이블명;
 
-평균값
-select avg(평균을 구하고싶은 컬럼명) from 테이블명;
+* 소수점자리 지정
+> ``` select 컬럼명, truncate(값, 소숫점자리) avg(평균값 컬럼명) as '지정할 이름' from 테이블명 group by 컬럼명; ```
+> 
+> ``` select userid, truncate(값, 소숫점자리) avg(amount*price) as '구매평균액' from buytbl group by userid; ```
 
-- 소수점자리 지정
-select 컬럼명, truncate(값, 소숫점자리) avg(평균값 컬럼명) as '지정할 이름' from 테이블명 group by 컬럼명;
-select userid, truncate(값, 소숫점자리) avg(amount*price) as '구매평균액' from buytbl group by userid;
+* max, min
+>     select max(컬럼명) from 테이블명;
+>     select min(컬럼명) from 테이블명;
 
--max, min
-select max(컬럼명) from 테이블명;
-select min(컬럼명) from 테이블명;
-
+```
 ex)
--- 가장 큰 키를 가지는 user의 모든 열의 합
+- 가장 큰 키를 가지는 user의 모든 열의 합
 select *from usertbl where height = (select max(height) from usertbl);
 select *from usertbl where height = (select min(height) from usertbl);
 
--- 가장 큰 키와 가장 작은 키의 값만 확인
+- 가장 큰 키와 가장 작은 키의 값만 확인
 select *from usertbl where height = (select max(height) from usertbl) or height = (select min(height) from usertbl);
-
+```
 
 2 select group by + having : having 은 group by 절에 의해 생성된 결과값 중 원하는 조건에 부합하는 데이터만 보고자 할 때 사용
 select 컬럼명, sum(더할 컬럼명) as '이름지정' from 테이블명 group by 컬럼명 having sum(더할컬럼명) > 5
