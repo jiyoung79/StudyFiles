@@ -14,21 +14,18 @@
 
 ## 1-2. DDL 종류<br>
 
-`CREATE : 테이블을 생성하는 역할`
-
-`ALTER	: 테이블의 구조를 수정하는 역할`
-
-`DROP : 테이블을 삭제하는 역할`
-
-`RENAME : 테이블을 이름을 변경하는 역할`
+    CREATE : 테이블을 생성하는 역할
+    ALTER	: 테이블의 구조를 수정하는 역할
+    DROP : 테이블을 삭제하는 역할
+    RENAME : 테이블을 이름을 변경하는 역할
 
 <br>
 
-`ALTER : 컬럼 변경 문법<br>
-ADD COLUMN : 컬럼을 추가하는 역할<br>
-DROP COLUMN	: 컬럼을 삭제하는 역할<br>
-MODIFY COLUMN	: 컬럼을 수정하는 역할<br>
-RENAME COLUMN	: 컬럼 이름을 변경하는 역할`<br>
+    ALTER : 컬럼 변경 문법
+    ADD COLUMN : 컬럼을 추가하는 역할
+    DROP COLUMN	: 컬럼을 삭제하는 역할
+    MODIFY COLUMN	: 컬럼을 수정하는 역할
+    RENAME COLUMN	: 컬럼 이름을 변경하는 역할
 
 <hr>
 
