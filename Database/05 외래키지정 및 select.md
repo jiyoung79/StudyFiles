@@ -24,42 +24,43 @@
 ```
 
 
-> ### 전체 DB확인
+> #### 전체 DB확인
 >     show databases;
 
-> 테이블 상태 확인
-show table status;
+> #### 테이블 상태 확인
+>     show table status;
 
-> 테이블 속성 정보 확인
-desc 테이블명;
+> #### 테이블 속성 정보 확인
+>     desc 테이블명;
 
-> 테이블 내 전체 열 가져오기
-use 작업DB;
-select * from 테이블명;
+> #### 테이블 내 전체 열 가져오기
+>     use 작업DB;
+>     select * from 테이블명;
 
-> 테이블 내 특정 열 가져오기
-use 작업DB;
-select 열이름 from 테이블명;
+> #### 테이블 내 특정 열 가져오기
+>     use 작업DB;
+>     select 열이름 from 테이블명;
 
-> 테이블 내 여러 열 가져오기
-use 작업DB;
-select 열이름, 열이름 ... from 테이블명
+> #### 테이블 내 여러 열 가져오기
+>     use 작업DB;
+>     select 열이름, 열이름 ... from 테이블명
 
-> 테이블 조회 시 열이름 별칭 지정
-use 작업DB;
-select 열이름 as 별칭 from 테이블명;
+> #### 테이블 조회 시 열이름 별칭 지정
+>     use 작업DB;
+>     select 열이름 as 별칭 from 테이블명;
 
 <hr>
 
-1) select where(조건절 - 비교연산자) 예시
+### 1-1. select where(조건절 - 비교연산자) 예시<br>
 
-select * from usertbl where name='김경호'; -- 동등 비교 연산자(=)
-select * from usertbl where userId='LSG'; -- 동등 비교 연산자(=)
-select * from usertbl where birthyear >=1900; -- 대소 비교 연산자
-select * from usertbl where height <=178; -- 대소 비교 연산자
+    select * from usertbl where name='김경호'; -- 동등 비교 연산자(=)
+    select * from usertbl where userId='LSG'; -- 동등 비교 연산자(=)
+    select * from usertbl where birthyear >=1900; -- 대소 비교 연산자
+    select * from usertbl where height <=178; -- 대소 비교 연산자
 
-2) select where(조건절 - 논리연산자) 예시
+### 1-2. select where(조건절 - 논리연산자) 예시
 
+```
 -- and 연산자(참 and 참) 을 만족하는 경우
 select * from usertbl where birthyear >= 1970 and height >= 180;
 
@@ -67,9 +68,12 @@ select * from usertbl where birthyear >= 1970 and height >= 180;
 select * from usertbl where birthyear >= 1970 or height >= 180; 
 
 select * from usertbl where height between 170 and 180;
+```
 
 
-3) in(포함문자열(완성된문자열)) , like(포함문자열(미완성된문자열 필터링)) 예시
+### 1-3. in(포함문자열(완성된문자열)) , like(포함문자열(미완성된문자열 필터링)) 예시<br>
+
+```
 - in
 select * from usertbl where addr in ('서울', '경남');
 select * from usertbl where addr = '경남' or addr = '서울';
@@ -78,41 +82,44 @@ select * from usertbl where addr = '경남' or addr = '서울';
 select * from usertbl where name like '김%'; -- 길이 제한 없는 모든 문자
 select * from usertbl where name like '%수'; -- 끝 글자가 '수'인 모든 문자
 select * from usertbl where name like '김_'; -- _ 개수만큼의 길이 제한이 있는 모든 문자
+```
 
-4) '열이름'이 비어있지 않은 행만 출력
+### 1-4. '열이름'이 비어있지 않은 행만 출력<br>
+
 select * from 테이블명 where 열이름 != 'null';
 select * from 테이블명 where 열이름 <> 'null';
 
-5) Select 조건절 - 서브쿼리 예시
+1-5. Select 조건절 - 서브쿼리 예시
 select height from usertbl where name='김경호'; -- 김경호의 키
 select *from usertbl where height>(select height from usertbl where name='김경호');
 
-6) Select Order by
+1-6. Select Order by
 select * from 테이블명 order by 열이름 asc;
 select * from 테이블명 order by 열이름 desc;
 
 asc : 오름차순(기본값)
 desc : 내림차순
 
-7) distinct : 중복되는 값을 하나로 묶어주는데 사용
+1-7. distinct : 중복되는 값을 하나로 묶어주는데 사용
 select distinct 열이름 from 테이블명;
 
-8) Limit
+1-8. Limit
 select * from 테이블명 limit 3;
 select * from 테이블명 limit 2,3; -> index 번호 2 부터 3개 나열
 
-9) 복사(테이블 복사)
-9)-1 구조 + 값 복사()
+1-9. 복사(테이블 복사)
+
+* 구조 + 값 복사()
 create table 복사한 새테이블명(select * from 복사할 기존테이블명);
 	이 때 pk, fk는 원본으로부터 복사가 되지 않음
 
 create table 복사한 새테이블명(select 열이름1, 열이름2, ... from 복사할 기존테이블명);
 	=> 기존 테이블명에서 복사하고싶은 열만 복사
 
-9)-2 구조만 복사(값X, PK O, FK X, Index O)
+*  구조만 복사(값X, PK O, FK X, Index O)
 create table 복사한 새테이블명 like 복사할 기존테이블명;
 
-9)-3 데이터만 복사
+*  데이터만 복사
 insert into 복사한 새테이블명 select * from 복사할 기존테이블명 where 복사할 데이터값;
 
 --------------------------------------------------------------------------------------------
