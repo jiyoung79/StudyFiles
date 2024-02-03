@@ -14,6 +14,9 @@
 
 # SELECT<br>
 
+### [SELECT sql문 1](https://github.com/jiyoung79/StudyFiles/blob/main/Database/sql%20files/01%20select.sql)
+### [SELECT sql문 2](https://github.com/jiyoung79/StudyFiles/blob/main/Database/sql%20files/02%20select2.sql)
+
 ## 1. select<br>
 
 * 의미 : 데이터 베이스 내의 테이블에서 원하는 정보를 가져오는데 사용되는 명령어<br>
@@ -169,21 +172,29 @@ select *from usertbl where height = (select min(height) from usertbl);
 select *from usertbl where height = (select max(height) from usertbl) or height = (select min(height) from usertbl);
 ```
 
-2 select group by + having : having 은 group by 절에 의해 생성된 결과값 중 원하는 조건에 부합하는 데이터만 보고자 할 때 사용
-select 컬럼명, sum(더할 컬럼명) as '이름지정' from 테이블명 group by 컬럼명 having sum(더할컬럼명) > 5
-		->생성된 결과값							->원하는 조건(앞에서 생성된 결과값)
+### 2-2. select group by + having<br>
 
+> having 은 group by 절에 의해 생성된 결과값 중 원하는 조건에 부합하는 데이터만 보고자 할 때 사용
+>     select 컬럼명, sum(더할 컬럼명) as '이름지정' from 테이블명 group by 컬럼명 having sum(더할컬럼명) > 5
+>     		->생성된 결과값							->원하는 조건(앞에서 생성된 결과값)
+
+```
 ex)
 select userid, sum(amount) as '구매총량' from buytbl group by userid having sum(amount) > 5; -- ㅇ
 select userid, sum(amount) as '구매총량' from buytbl group by userid having '구매총량' > 5; -- x 지정한 이름으로 불러오면 실행되지 않음
 
 select userid, truncate(avg(amount*price), 2) as '구매평균액' from buytbl group by userid having truncate(avg(amount*price), 2); -- 집계결과에 대한 조건절
+```
 
+### 2-3. select + group by + rollup <br>
 
-3 select + group by + rollup : 그룹별로 합계를 한 번에 구할 때 사용
-				group by 뒤 기준들의 순서에 따라 with rollup의 결과도 달라짐
+> 그룹별로 합계를 한 번에 구할 때 사용
+> group by 뒤 기준들의 순서에 따라 with rollup의 결과도 달라짐
+
+```
 ex)
 select num,groupname, sum(price*amount) from buytbl group by groupname, num with rollup;
 select groupname, sum(price*amount) from buytbl group by groupname with rollup;
 select userid, addr, avg(height) from usertbl group by addr, userid with rollup;
+```
 
