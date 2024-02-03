@@ -233,7 +233,8 @@ create table 테이블명(
 
 * Default 삭제하기
 
-> ```
+> 
+```
 alter table 테이블명 alter column 열이름 drop default;
 select * from 테이블명;
 ```
