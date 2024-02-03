@@ -1,28 +1,41 @@
 # 제약조건(constraint)
 ### [제약조건 sql문](https://github.com/jiyoung79/StudyFiles/blob/main/Database/sql%20files/04%20constraint.sql)
+
 <hr>
-1. PK<br>
-테이블을 만들 때 PK 지정<br>
+
+## 1. PK<br>
+
+* 테이블을 만들 때 PK 지정<br>
+
+### 1-1. auto_increment<br>
+
+> table을 만들 때 pk에서 AI를 선택하면 적용됨
+> 그 후 값을 넣어 출력하면 자동으로 순서 생성
+
+```
+ex)
+	insert into tbl_a(name) values('홍길동');
+	insert into tbl_a values(null, '김민수');
+```
+
+```
+delete from 테이블명; 을 하고나면 숫자가 처음부터 매겨지지는 않는다.
+			(이미 카운팅이 되었기 때문)
+			(auto_increment를 초기화하면 처음부터 매겨짐)
+```
+
 <br>
-1) auto_increment<br>
-table을 만들 때 pk에서 AI를 선택하면 적용됨<br>
-그 후 값을 넣어 출력하면 자동으로 순서 생성<br>
+
+### 1-2. auto_increment 초기화<br>
+
+>    alter table 테이블명 auto_increment = 초기화할 값;
+
 <br>
-ex)<br>
-insert into tbl_a(name) values('홍길동');<br>
-insert into tbl_a values(null, '김민수');<br>
-<br>
-delete from 테이블명; 을 하고나면 숫자가 처음부터 매겨지지는 않는다.<br>
-			(이미 카운팅이 되었기 때문)<br>
-			(auto_increment를 초기화하면 처음부터 매겨짐)<br>
-<br>
-2) auto_increment 초기화<br>
-alter table 테이블명 auto_increment = 초기화할 값;<br>
-<br>
-<br>
-3) pk 제약조건<br>
-unique : 값이 중복되면 안된다<br>
-not null : 값이 없으면 안된다<br>
+
+### 3) pk 제약조건<br>
+
+> unique : 값이 중복되면 안된다
+> not null : 값이 없으면 안된다
 <br>
 ex)<br>
 insert into tbl_a values(2, '홍길동');<br>
