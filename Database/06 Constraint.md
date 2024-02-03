@@ -14,7 +14,6 @@
 
 #### ex) <br>
 
-> 
 ```
 insert into tbl_a(name) values('홍길동');
 insert into tbl_a values(null, '김민수');
@@ -39,8 +38,9 @@ delete from 테이블명; 을 하고나면 숫자가 처음부터 매겨지지�
 > unique : 값이 중복되면 안된다<br>
 > not null : 값이 없으면 안된다<br>
 
+#### ex) <br>
+
 ```
-ex)
 	insert into tbl_a values(2, '홍길동');
 	insert into tbl_a values(1, '홍길동');
 	select * from tbl_a;
@@ -94,7 +94,7 @@ on update 옵션명
 on delete 옵션명;
 ```
 
-* 예시
+#### ex) <br>
 
 ```
 create table tbl_c(
