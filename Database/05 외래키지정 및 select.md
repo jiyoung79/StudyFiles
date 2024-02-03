@@ -174,7 +174,8 @@ select *from usertbl where height = (select max(height) from usertbl) or height 
 
 ### 2-2. select group by + having<br>
 
-> having 은 group by 절에 의해 생성된 결과값 중 원하는 조건에 부합하는 데이터만 보고자 할 때 사용
+> having 은 group by 절에 의해 생성된 결과값 중 원하는 조건에 부합하는 데이터만 보고자 할 때 사용<br>
+
 >     select 컬럼명, sum(더할 컬럼명) as '이름지정' from 테이블명 group by 컬럼명 having sum(더할컬럼명) > 5
 >     		->생성된 결과값							->원하는 조건(앞에서 생성된 결과값)
 
