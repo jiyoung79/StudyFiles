@@ -4,6 +4,8 @@
 
 * fk_외래키가 포함된 테이블_기본기가 포함된 테이블
 
+#### ex) <br>
+
 ```
 	fk_registration_student_id
 	fk_registration_lecture_id
@@ -140,8 +142,9 @@ select * from usertbl where name like '김_'; -- _ 개수만큼의 길이 제한
 * 총합
 >     select 컬럼명, sum(더할 컬럼명) from 테이블명 group by 컬럼명;
 
+#### ex) <br>
+
 ```
-ex)
 - userid 별 amount 총합(sum)
 select userid, sum(amount) from buytbl group by userid;
 
