@@ -25,7 +25,7 @@
 
 
 > #### 전체 DB확인
->     show databases;
+> show databases;
 
 > #### 테이블 상태 확인
 >     show table status;
@@ -61,10 +61,10 @@
 ### 1-2. select where(조건절 - 논리연산자) 예시
 
 ```
--- and 연산자(참 and 참) 을 만족하는 경우
+- and 연산자(참 and 참) 을 만족하는 경우
 select * from usertbl where birthyear >= 1970 and height >= 180;
 
--- or 연산자(거짓 or 참, 참 or 거짓, 참 or 참) 을 만족하는 경우 
+- or 연산자(거짓 or 참, 참 or 거짓, 참 or 참) 을 만족하는 경우 
 select * from usertbl where birthyear >= 1970 or height >= 180; 
 
 select * from usertbl where height between 170 and 180;
@@ -86,28 +86,32 @@ select * from usertbl where name like '김_'; -- _ 개수만큼의 길이 제한
 
 ### 1-4. '열이름'이 비어있지 않은 행만 출력<br>
 
-select * from 테이블명 where 열이름 != 'null';
-select * from 테이블명 where 열이름 <> 'null';
+> select * from 테이블명 where 열이름 != 'null';
+> select * from 테이블명 where 열이름 <> 'null';
 
-1-5. Select 조건절 - 서브쿼리 예시
-select height from usertbl where name='김경호'; -- 김경호의 키
-select *from usertbl where height>(select height from usertbl where name='김경호');
+### 1-5. Select 조건절 - 서브쿼리 예시<br>
 
-1-6. Select Order by
-select * from 테이블명 order by 열이름 asc;
-select * from 테이블명 order by 열이름 desc;
+    select height from usertbl where name='김경호'; -- 김경호의 키
+    select *from usertbl where height>(select height from usertbl where name='김경호');
+
+### 1-6. Select Order by<br>
+
+> select * from 테이블명 order by 열이름 asc;
+> select * from 테이블명 order by 열이름 desc;
 
 asc : 오름차순(기본값)
 desc : 내림차순
 
-1-7. distinct : 중복되는 값을 하나로 묶어주는데 사용
-select distinct 열이름 from 테이블명;
+### 1-7. distinct : 중복되는 값을 하나로 묶어주는데 사용<br>
 
-1-8. Limit
+    select distinct 열이름 from 테이블명;
+
+### 1-8. Limit<br>
+
 select * from 테이블명 limit 3;
 select * from 테이블명 limit 2,3; -> index 번호 2 부터 3개 나열
 
-1-9. 복사(테이블 복사)
+### 1-9. 복사(테이블 복사)<br>
 
 * 구조 + 값 복사()
 create table 복사한 새테이블명(select * from 복사할 기존테이블명);
