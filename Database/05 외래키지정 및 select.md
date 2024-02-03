@@ -174,8 +174,9 @@ select userid, sum(amount*price) as '구매총액' from buytbl group by userid;
 >     select max(컬럼명) from 테이블명;
 >     select min(컬럼명) from 테이블명;
 
+#### ex) <br>
+
 ```
-ex)
 - 가장 큰 키를 가지는 user의 모든 열의 합
 select *from usertbl where height = (select max(height) from usertbl);
 select *from usertbl where height = (select min(height) from usertbl);
@@ -191,8 +192,9 @@ select *from usertbl where height = (select max(height) from usertbl) or height 
 >     select 컬럼명, sum(더할 컬럼명) as '이름지정' from 테이블명 group by 컬럼명 having sum(더할컬럼명) > 5
 >     		->생성된 결과값							->원하는 조건(앞에서 생성된 결과값)
 
+#### ex) <br>
+
 ```
-ex)
 select userid, sum(amount) as '구매총량' from buytbl group by userid having sum(amount) > 5; -- ㅇ
 select userid, sum(amount) as '구매총량' from buytbl group by userid having '구매총량' > 5; -- x 지정한 이름으로 불러오면 실행되지 않음
 
@@ -204,8 +206,9 @@ select userid, truncate(avg(amount*price), 2) as '구매평균액' from buytbl g
 > 그룹별로 합계를 한 번에 구할 때 사용
 > group by 뒤 기준들의 순서에 따라 with rollup의 결과도 달라짐
 
+#### ex) <br>
+
 ```
-ex)
 select num,groupname, sum(price*amount) from buytbl group by groupname, num with rollup;
 select groupname, sum(price*amount) from buytbl group by groupname with rollup;
 select userid, addr, avg(height) from usertbl group by addr, userid with rollup;
