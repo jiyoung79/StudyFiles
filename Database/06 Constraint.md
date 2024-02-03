@@ -226,7 +226,9 @@ create table 테이블명(
 
 * 테이블 생성된 이후 만들기
 
-    alter table 테이블명 alter column 열이름 set default '값';
+```
+alter table 테이블명 alter column 열이름 set default '값';
+```
 
 * Default 삭제하기
 
