@@ -152,7 +152,9 @@ create table 테이블명(
 
 * 테이블 생성된 이후 만들기<br>
 
-    alter table 테이블명 add constraint uk명 unique(설정할 열이름);
+```
+alter table 테이블명 add constraint uk명 unique(설정할 열이름);
+```
 
 *  unique 삭제하기<br>
 
