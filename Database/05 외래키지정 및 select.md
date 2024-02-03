@@ -25,7 +25,7 @@
 
 
 > #### 전체 DB확인
-> show databases;
+>     show databases;
 
 > #### 테이블 상태 확인
 >     show table status;
@@ -86,8 +86,8 @@ select * from usertbl where name like '김_'; -- _ 개수만큼의 길이 제한
 
 ### 1-4. '열이름'이 비어있지 않은 행만 출력<br>
 
-> select * from 테이블명 where 열이름 != 'null';
-> select * from 테이블명 where 열이름 <> 'null';
+>     select * from 테이블명 where 열이름 != 'null';
+>     select * from 테이블명 where 열이름 <> 'null';
 
 ### 1-5. Select 조건절 - 서브쿼리 예시<br>
 
@@ -96,35 +96,35 @@ select * from usertbl where name like '김_'; -- _ 개수만큼의 길이 제한
 
 ### 1-6. Select Order by<br>
 
-> select * from 테이블명 order by 열이름 asc;
-> select * from 테이블명 order by 열이름 desc;
+>     select * from 테이블명 order by 열이름 asc;
+>     select * from 테이블명 order by 열이름 desc;
 
-asc : 오름차순(기본값)
-desc : 내림차순
+* asc : 오름차순(기본값)
+* desc : 내림차순
 
 ### 1-7. distinct : 중복되는 값을 하나로 묶어주는데 사용<br>
 
-    select distinct 열이름 from 테이블명;
+>     select distinct 열이름 from 테이블명;
 
 ### 1-8. Limit<br>
 
-select * from 테이블명 limit 3;
-select * from 테이블명 limit 2,3; -> index 번호 2 부터 3개 나열
+>     select * from 테이블명 limit 3;
+>     select * from 테이블명 limit 2,3; -> index 번호 2 부터 3개 나열
 
 ### 1-9. 복사(테이블 복사)<br>
 
 * 구조 + 값 복사()
-create table 복사한 새테이블명(select * from 복사할 기존테이블명);
+    create table 복사한 새테이블명(select * from 복사할 기존테이블명);
 	이 때 pk, fk는 원본으로부터 복사가 되지 않음
 
-create table 복사한 새테이블명(select 열이름1, 열이름2, ... from 복사할 기존테이블명);
+    create table 복사한 새테이블명(select 열이름1, 열이름2, ... from 복사할 기존테이블명);
 	=> 기존 테이블명에서 복사하고싶은 열만 복사
 
-*  구조만 복사(값X, PK O, FK X, Index O)
-create table 복사한 새테이블명 like 복사할 기존테이블명;
+* 구조만 복사(값X, PK O, FK X, Index O)
+    create table 복사한 새테이블명 like 복사할 기존테이블명;
 
-*  데이터만 복사
-insert into 복사한 새테이블명 select * from 복사할 기존테이블명 where 복사할 데이터값;
+* 데이터만 복사
+    insert into 복사한 새테이블명 select * from 복사할 기존테이블명 where 복사할 데이터값;
 
 --------------------------------------------------------------------------------------------
 [ GROUP BY ]
