@@ -130,10 +130,12 @@ select * from usertbl where name like '김_'; -- _ 개수만큼의 길이 제한
 <br>
 
 * 구조만 복사(값X, PK O, FK X, Index O)<br>
-    create table 복사한 새테이블명 like 복사할 기존테이블명;<br>
+
+    create table 복사한 새테이블명 like 복사할 기존테이블명;
 
 * 데이터만 복사<br>
-    insert into 복사한 새테이블명 select * from 복사할 기존테이블명 where 복사할 데이터값;<br>
+
+    insert into 복사한 새테이블명 select * from 복사할 기존테이블명 where 복사할 데이터값;
 
 --------------------------------------------------------------------------------------------
 ## 2. GROUP BY<br>
