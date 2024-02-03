@@ -156,7 +156,7 @@ create table 테이블명(
 
 *  unique 삭제하기<br>
 
-````
+```
 alter table 테이블명 drop constraint uk명;
 desc 테이블명;
 ```
