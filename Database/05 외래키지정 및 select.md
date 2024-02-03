@@ -113,18 +113,19 @@ select * from usertbl where name like '김_'; -- _ 개수만큼의 길이 제한
 
 ### 1-9. 복사(테이블 복사)<br>
 
-* 구조 + 값 복사()
-    create table 복사한 새테이블명(select * from 복사할 기존테이블명);
-	이 때 pk, fk는 원본으로부터 복사가 되지 않음
+* 구조 + 값 복사()<br>
+    create table 복사한 새테이블명(select * from 복사할 기존테이블명);<br>
+	이 때 pk, fk는 원본으로부터 복사가 되지 않음<br>
+ <br>
+    create table 복사한 새테이블명(select 열이름1, 열이름2, ... from 복사할 기존테이블명);<br>
+	=> 기존 테이블명에서 복사하고싶은 열만 복사<br>
+<br>
 
-    create table 복사한 새테이블명(select 열이름1, 열이름2, ... from 복사할 기존테이블명);
-	=> 기존 테이블명에서 복사하고싶은 열만 복사
+* 구조만 복사(값X, PK O, FK X, Index O)<br>
+    create table 복사한 새테이블명 like 복사할 기존테이블명;<br>
 
-* 구조만 복사(값X, PK O, FK X, Index O)
-    create table 복사한 새테이블명 like 복사할 기존테이블명;
-
-* 데이터만 복사
-    insert into 복사한 새테이블명 select * from 복사할 기존테이블명 where 복사할 데이터값;
+* 데이터만 복사<br>
+    insert into 복사한 새테이블명 select * from 복사할 기존테이블명 where 복사할 데이터값;<br>
 
 --------------------------------------------------------------------------------------------
 [ GROUP BY ]
