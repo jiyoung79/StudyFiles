@@ -1,0 +1,58 @@
+CMD - DDL, DML EX)
+
+--------------------
+DB조회
+--------------------
+show databases;
+
+--------------------
+DB위치 지정
+--------------------
+use mysql;
+
+--------------------
+테이블 확인
+--------------------
+show tables;
+select * from user;
+
+
+--------------------
+DB 생성
+--------------------
+db생성(TUI)
+create database testdb;
+show databases;
+
+
+--------------------
+Table 생성
+--------------------
+table 생성(GUI) - 생략
+
+table 생성(TUI)
+use testdb;
+show tables;
+mysql> create table tbl_user(
+    -> user_id varchar(10) primary key,
+    -> user_password varchar(100) not null,
+    -> user_name varchar(45) not null );
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> show tables;
++------------------+
+| Tables_in_testdb |
++------------------+
+| tbl_user         |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> desc tbl_user;
++---------------+--------------+------+-----+---------+-------+
+| Field         | Type         | Null | Key | Default | Extra |
++---------------+--------------+------+-----+---------+-------+
+| user_id       | varchar(10)  | NO   | PRI | NULL    |       |
+| user_password | varchar(100) | NO   |     | NULL    |       |
+| user_name     | varchar(45)  | NO   |     | NULL    |       |
++---------------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
