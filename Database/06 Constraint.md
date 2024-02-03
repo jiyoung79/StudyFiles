@@ -30,7 +30,7 @@ delete from 테이블명; 을 하고나면 숫자가 처음부터 매겨지지�
 
 ### 1-2. auto_increment 초기화<br>
 
->    alter table 테이블명 auto_increment = 초기화할 값;
+> ```alter table 테이블명 auto_increment = 초기화할 값;```
 
 <br>
 
@@ -51,7 +51,7 @@ delete from 테이블명; 을 하고나면 숫자가 처음부터 매겨지지�
 
 ### 1-4. pk 추가<br>
 
->    alter table 테이블명 add constraint PK명 primary key(추가할 pk명1, 추가할 pk명, ..);
+> ```alter table 테이블명 add constraint PK명 primary key(추가할 pk명1, 추가할 pk명, ..);```
 
 <br>
 
@@ -204,15 +204,11 @@ create table 테이블명 (
 
 * 테이블 생성된 이후 만들기<br>
 
-```
-alter table 테이블명 add check (조건값);
-```
+> ```alter table 테이블명 add check (조건값);```
 
 * 테이블 생성된 이후 check 제약 조건값 2개 이상 만들기<br>
 
-```
-alter table 테이블명 add constraint CHK_명 check(조건값1 AND 조건값2);
-```
+> ```alter table 테이블명 add constraint CHK_명 check(조건값1 AND 조건값2);```
 
 <hr>
 
@@ -233,13 +229,11 @@ create table 테이블명(
 
 * 테이블 생성된 이후 만들기
 
-```
-alter table 테이블명 alter column 열이름 set default '값';
-```
+> ```alter table 테이블명 alter column 열이름 set default '값';```
 
 * Default 삭제하기
 
-```
+> ```
 alter table 테이블명 alter column 열이름 drop default;
 select * from 테이블명;
 ```
