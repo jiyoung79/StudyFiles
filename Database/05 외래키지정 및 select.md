@@ -4,9 +4,11 @@
 
 * fk_외래키가 포함된 테이블_기본기가 포함된 테이블
 
-    `ex)<br>
-	fk_registration_student_id<br>
-	fk_registration_lecture_id<br>`
+    ex)
+	fk_registration_student_id
+
+
+	fk_registration_lecture_id`
 
 <hr>
 
