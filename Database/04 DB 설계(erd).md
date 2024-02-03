@@ -17,16 +17,12 @@
 
 ## 1. 개념<br>
 
-<br>
-
 * 존재하고 있는 것(Entity)들의 관계(Relationshop)을 나타낸 도표(Diagram)<br>
 * 데이터베이스 구조를 한 눈에 알아보기 위해 그려놓는 다이어그램<br>
 
-<br>
 
 ## 2. ERD 표기법<br>
 
-<br>
 
 ### 1) 개체(Entity)<br>
 
