@@ -85,10 +85,44 @@ create table 테이블명(
 
 
 ### 2-2. 만들어진 테이블에서 FK 설정<br>
-alter table 테이블명 add constraint FK명 foreign key(FK로 설정할 열이름) references 원래의 FK가 있는 테이블명(FK로 설정할 열이름)<br>
-on update 옵션명<br>
-on delete 옵션명;<br>
-<br>
+
+```
+alter table 테이블명 add constraint FK명 foreign key(FK로 설정할 열이름) references 원래의 FK가 있는 테이블명(FK로 설정할 열이름)
+on update 옵션명
+on delete 옵션명;
+```
+
+* 예시
+
+```
+create table tbl_c(
+	num int primary key,
+	tbl_a_id int,
+	name varchar(45),
+    constraint fk_tbl_c_tbl_a foreign key(tbl_a_id) references tbl_a(id)
+	on update cascade
+    on delete set null
+);
+desc tbl_b;
+```
+
+* 문제
+
+> 
+```
+1. buytbl을 copy_buytbl로 구조+데이터복사
+create table copy_buytbl (select * from buytbl);
+
+2. num을 PK 로 설정
+alter table copy_buytbl add constraint PK_buytbl primary key(num);
+desc copy_buytbl;
+
+3. userid 를 FK로 설정(on delete restrict on update cascade)
+alter table copy_buytbl add constraint fk_copy_buytbl_buytbl foreign key(userid) references buytbl(userid)
+on update cascade
+on delete restrict;
+```
+
 <hr>
 
 ## 3. UNIQUE<br>
@@ -118,7 +152,7 @@ create table 테이블명(
 
 * 테이블 생성된 이후 만들기<br>
 
-    alter table 테이블명 add constraint uk명 unique(설정할 열이름);
+>    alter table 테이블명 add constraint uk명 unique(설정할 열이름);
 
 *  unique 삭제하기<br>
 
@@ -128,47 +162,70 @@ desc 테이블명;
 ```
 
 <hr>
-4. CHECK<br>
-특정 컬럼의 입력 가능한 값의 범위를 지정할 때 사용<br>
-만약 어느 한 컬럼에 CHECK 제약조건을 설정한다면, 그 컬럼은 특정한 범위 안에서의 값만 허용한다.<br>
-만약 어느 한 테이블에 CHECK 제약조건을 설정한다면, 그 레코드의 다른 컬럼을 기반으로 특정 컬럼의 값을 제한할 수도 있다.<br>
+
+## 4. CHECK <br>
+
+> 특정 컬럼의 입력 가능한 값의 범위를 지정할 때 사용<br>
+> 만약 어느 한 컬럼에 CHECK 제약조건을 설정한다면, 그 컬럼은 특정한 범위 안에서의 값만 허용한다.<br>
+> 만약 어느 한 테이블에 CHECK 제약조건을 설정한다면, 그 레코드의 다른 컬럼을 기반으로 특정 컬럼의 값을 제한할 수도 있다.<br>
+
 <br>
-- 테이블 만들 때 같이 만들기<br>
-create table 테이블명 (<br>
-    열이름 자료형 제약조건,<br>
-    열이름 자료형 제약조건,<br>
-        ... ,<br>
-    열이름 자료형 check(조건값)<br>
-);<br>
-<br>
-- CHECK 제약조건에 이름을 설정하고, 두개 이상의 컬럼에 CHECK 제약조건을 적용할 경우<br>
-create table 테이블명 (<br>
-    열이름 자료형 제약조건,<br>
-    열이름 자료형 제약조건,<br>
-        ... ,<br>
-    constraint CHK_명 check (조건값1 AND 조건값2)<br>
-);<br>
-<br>
-- 테이블 생성된 이후 만들기<br>
-alter table 테이블명 add check (조건값);<br>
-- 테이블 생성된 이후 check 제약 조건값 2개 이상 만들기<br>
-alter table 테이블명 add constraint CHK_명 check(조건값1 AND 조건값2);<br>
+
+* 테이블 만들 때 같이 만들기<br>
+
+```
+create table 테이블명 (
+    열이름 자료형 제약조건,
+    열이름 자료형 제약조건,
+        ... ,
+    열이름 자료형 check(조건값)
+);
+```
+
+* CHECK 제약조건에 이름을 설정하고, 두개 이상의 컬럼에 CHECK 제약조건을 적용할 경우<br>
+
+```
+create table 테이블명 (
+    열이름 자료형 제약조건,
+    열이름 자료형 제약조건,
+        ... ,
+    constraint CHK_명 check (조건값1 AND 조건값2)
+);
+```
+* 테이블 생성된 이후 만들기<br>
+
+    alter table 테이블명 add check (조건값);
+
+* 테이블 생성된 이후 check 제약 조건값 2개 이상 만들기<br>
+
+    alter table 테이블명 add constraint CHK_명 check(조건값1 AND 조건값2);
+
 <hr>
-5. DEFAULT<br>
-한 컬럼에 동일한 값을 지정할 때 사용 <br>
-- 테이블 만들 때 같이 만들기<br>
-create table 테이블명(<br>
-    열이름 자료형 제약조건,<br>
-    열이름 자료형 제약조건,<br>
-        ... ,<br>
-    열이름 자료형 default '값'<br>
-);<br>
-<br>
-- 테이블 생성된 이후 만들기<br>
-alter table 테이블명 alter column 열이름 set default '값';<br>
-<br>
-- Default 삭제하기<br>
-alter table 테이블명 alter column 열이름 drop default;<br>
-select * from 테이블명;<br>
+
+## 5. DEFAULT<br>
+
+> 한 컬럼에 동일한 값을 지정할 때 사용 <br>
+
+* 테이블 만들 때 같이 만들기
+
+```
+create table 테이블명(
+    열이름 자료형 제약조건,
+    열이름 자료형 제약조건,
+        ... ,
+    열이름 자료형 default '값'
+);
+```
+
+* 테이블 생성된 이후 만들기
+
+    alter table 테이블명 alter column 열이름 set default '값';
+
+* Default 삭제하기
+
+```
+alter table 테이블명 alter column 열이름 drop default;
+select * from 테이블명;
+```
 
 
