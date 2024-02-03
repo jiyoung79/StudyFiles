@@ -36,9 +36,9 @@ delete from 테이블명; 을 하고나면 숫자가 처음부터 매겨지지�
 
 ### 1-3. pk 제약조건<br>
 
-> unique : 값이 중복되면 안된다<br>
+* unique : 값이 중복되면 안된다<br>
 
-> not null : 값이 없으면 안된다<br>
+* not null : 값이 없으면 안된다<br>
 
 #### ex) <br>
 
@@ -81,11 +81,11 @@ create table 테이블명(
 
 ### 2-1. FK Options<br>
 
-> RESTRICT	:	PK, FK 열의 값을 변경 차단<br>
-> CASCADE		:	PK열의 값 on Update, on Delete 이 변경 시 FK 열의 값도 함께 변경<br>
-> SET NULL	:	PK열의 값이 변경시 FK 열의 값을 NULL로 설정<br>
-> SET DEFAULT  	:	PK열의 값이 변경시 FK 열의 값은 Default로 설정된 기본값을 적용<br>
-> NO ACTION	:	PK열의 값이 변경시 FK 열의 값은 변경 되지 않음으로 설정<br>
+* RESTRICT	:	PK, FK 열의 값을 변경 차단<br>
+* CASCADE		:	PK열의 값 on Update, on Delete 이 변경 시 FK 열의 값도 함께 변경<br>
+* SET NULL	:	PK열의 값이 변경시 FK 열의 값을 NULL로 설정<br>
+* SET DEFAULT  	:	PK열의 값이 변경시 FK 열의 값은 Default로 설정된 기본값을 적용<br>
+* NO ACTION	:	PK열의 값이 변경시 FK 열의 값은 변경 되지 않음으로 설정<br>
 
 
 ### 2-2. 만들어진 테이블에서 FK 설정<br>
