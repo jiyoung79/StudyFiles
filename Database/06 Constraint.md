@@ -9,8 +9,8 @@
 
 ### 1-1. auto_increment<br>
 
-> table을 만들 때 pk에서 AI를 선택하면 적용됨
-> 그 후 값을 넣어 출력하면 자동으로 순서 생성
+> table을 만들 때 pk에서 AI를 선택하면 적용됨<br>
+> 그 후 값을 넣어 출력하면 자동으로 순서 생성<br>
 
 ```
 ex)
@@ -32,72 +32,101 @@ delete from 테이블명; 을 하고나면 숫자가 처음부터 매겨지지�
 
 <br>
 
-### 3) pk 제약조건<br>
+### 1-3. pk 제약조건<br>
 
-> unique : 값이 중복되면 안된다
-> not null : 값이 없으면 안된다
+> unique : 값이 중복되면 안된다<br>
+> not null : 값이 없으면 안된다<br>
+
+```
+ex)
+	insert into tbl_a values(2, '홍길동');
+	insert into tbl_a values(1, '홍길동');
+	select * from tbl_a;
+	-> 순서를 다르게 설정해도 asc로 정렬(기본값)
+```
+
+### 1-4. pk 추가<br>
+
+>    alter table 테이블명 add constraint PK명 primary key(추가할 pk명1, 추가할 pk명, ..);
+
 <br>
-ex)<br>
-insert into tbl_a values(2, '홍길동');<br>
-insert into tbl_a values(1, '홍길동');<br>
-select * from tbl_a;<br>
-<br>
--> 순서를 다르게 설정해도 asc로 정렬(기본값)<br>
-<br>
-4) pk 추가<br>
-alter table 테이블명 add constraint PK명 primary key(추가할 pk명1, 추가할 pk명, ..);<br>
-<br>
--- 문제 : buytbl의 구조+데이터 복사 및 num 을 pk로 설정<br>
-create table buytbl_copy (select * from buytbl);<br>
-desc buytbl_copy;	-> 확인<br>
-alter table buytbl_copy add constraint PK_buytbl_copy_num primary key(num);<br>
-desc buytbl_copy;	-> 확인<br>
+
+* 문제 : buytbl의 구조+데이터 복사 및 num 을 pk로 설정<br>
+
+```
+create table buytbl_copy (select * from buytbl);
+desc buytbl_copy;	-> 확인
+alter table buytbl_copy add constraint PK_buytbl_copy_num primary key(num);
+desc buytbl_copy;	-> 확인
+```
+
 <hr>
-2. FK<br>
-create table 테이블명(<br>
-	.... ,<br>
-	.... ,<br>
-	constraint 외래키명 foreign key(외래키열명) references tbl_a(기본키열명)<br>
-);<br>
-<br>
-<br>
-1) FK Options<br>
-<br>
-RESTRICT	:	PK, FK 열의 값을 변경 차단<br>
-CASCADE		:	PK열의 값 on Update, on Delete 이 변경 시 FK 열의 값도 함께 변경<br>
-SET NULL	:	PK열의 값이 변경시 FK 열의 값을 NULL로 설정<br>
-SET DEFAULT  	:	PK열의 값이 변경시 FK 열의 값은 Default로 설정된 기본값을 적용<br>
-NO ACTION	:	PK열의 값이 변경시 FK 열의 값은 변경 되지 않음으로 설정<br>
-<br>
-2) 만들어진 테이블에서 FK 설정<br>
+
+## 2. FK<br>
+
+* 구조
+  
+```
+create table 테이블명(
+	.... ,
+	.... ,
+	constraint 외래키명 foreign key(외래키열명) references tbl_a(기본키열명)
+);
+```
+
+
+### 2-1. FK Options<br>
+
+> RESTRICT	:	PK, FK 열의 값을 변경 차단<br>
+> CASCADE		:	PK열의 값 on Update, on Delete 이 변경 시 FK 열의 값도 함께 변경<br>
+> SET NULL	:	PK열의 값이 변경시 FK 열의 값을 NULL로 설정<br>
+> SET DEFAULT  	:	PK열의 값이 변경시 FK 열의 값은 Default로 설정된 기본값을 적용<br>
+> NO ACTION	:	PK열의 값이 변경시 FK 열의 값은 변경 되지 않음으로 설정<br>
+
+
+### 2-2. 만들어진 테이블에서 FK 설정<br>
 alter table 테이블명 add constraint FK명 foreign key(FK로 설정할 열이름) references 원래의 FK가 있는 테이블명(FK로 설정할 열이름)<br>
 on update 옵션명<br>
 on delete 옵션명;<br>
 <br>
 <hr>
-3. UNIQUE<br>
-컬럼의 값이 중복되지 않게 하는 제약이다.<br>
-이것 때문에 테이블의 각 레코드는 유일한 레코드가 될 수 있다.<br>
+
+## 3. UNIQUE<br>
+
+> 컬럼의 값이 중복되지 않게 하는 제약이다.<br>
+> 이것 때문에 테이블의 각 레코드는 유일한 레코드가 될 수 있다.<br>
+
 <br>
-<주의할 점><br>
-PRIMARY KEY 제약은 자동적으로 UNIQUE 제약이 따라간다.<br>
-UNIQUE 는 한 테이블에 여러개를 지정할 수 있지만, PRIMARY KEY 제약은 오로지 1개 만 지정할 수 있다.<br>
+
+* 주의할 점<br>
+
+> PRIMARY KEY 제약은 자동적으로 UNIQUE 제약이 따라간다.<br>
+> UNIQUE 는 한 테이블에 여러개를 지정할 수 있지만, PRIMARY KEY 제약은 오로지 1개 만 지정할 수 있다.<br>
+
 <br>
-- 테이블 만들 때 같이 만들기<br>
-create table 테이블명<br>
-(<br>
-    열이름 자료형 제약조건,<br>
-    열이름 자료형 제약조건,<br>
-        ... ,<br>
-    열이름 자료형 unique<br>
-);<br>
-<br>
-- 테이블 생성된 이후 만들기<br>
-alter table 테이블명 add constraint uk명 unique(설정할 열이름);<br>
-<br>
-- unique 삭제하기<br>
-alter table 테이블명 drop constraint uk명;<br>
-desc 테이블명;<br>
+
+> 테이블 만들 때 같이 만들기<br>
+
+```
+create table 테이블명(
+    열이름 자료형 제약조건,
+    열이름 자료형 제약조건,
+        ... ,
+    열이름 자료형 unique
+);
+```
+
+* 테이블 생성된 이후 만들기<br>
+
+    alter table 테이블명 add constraint uk명 unique(설정할 열이름);
+
+*  unique 삭제하기<br>
+
+````
+alter table 테이블명 drop constraint uk명;
+desc 테이블명;
+```
+
 <hr>
 4. CHECK<br>
 특정 컬럼의 입력 가능한 값의 범위를 지정할 때 사용<br>
