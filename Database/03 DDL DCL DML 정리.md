@@ -23,7 +23,7 @@
 
     ALTER           : 컬럼 변경 문법
     ADD COLUMN      : 컬럼을 추가하는 역할
-    DROP COLUMN	    : 컬럼을 삭제하는 역할
+    DROP COLUMN	  : 컬럼을 삭제하는 역할
     MODIFY COLUMN	: 컬럼을 수정하는 역할
     RENAME COLUMN	: 컬럼 이름을 변경하는 역할
 
