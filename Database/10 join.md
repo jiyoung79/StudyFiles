@@ -37,6 +37,8 @@
 > 한 테이블(자기자신)내에서 JOIN <br>
 > CROSS와 SELF는 잘 사용하지 않음. <br>
 
+<hr>
+
 ## 1-2. INNER JOIN (기본) <br>
 
 ```
@@ -59,6 +61,9 @@ inner join buytbl
 on usertbl.userid = buytbl.userid;
 ```
 
+<hr>
+
+
 * INNER JOIN 원하는 열만 출력(열이름 중복시 특정 테이블의 열이름으로 선택해서 지정한다. ex) select usertbl.useid, ...) <br>
 
 ### ex) <br>
@@ -69,6 +74,9 @@ from usertbl
 inner join buytbl
 on usertbl.userid = buytbl.userid;
 ```
+
+<hr>
+
 
 * INNER JOIN (별칭지정) <br>
 
@@ -81,6 +89,9 @@ inner join buytbl B
 on U.userid = B.userid;
 ```
 -> U와 B가 별칭
+
+<hr>
+
 
 * WHERE 조건절 적용 <br>
 
@@ -101,6 +112,9 @@ inner join buytbl B
 on U.userid = B.userid
 where amount <= 5;
 ```
+
+<hr>
+
 
 * 문제 <br>
 
@@ -126,6 +140,8 @@ inner join buytbl B
 where groupname = '전자';
 ```
 
+<hr>
+
 ## 1-3. OUTER JOIN <br>
 
 ```
@@ -135,6 +151,8 @@ FROM 첫 번째 테이블(LEFT 테이블)
      ON 조인 조건
 WHERE 검색 조건      -> 생략가능
 ```
+
+<hr>
 
 * left Outer Join(on 조건을 만족하지 않는 left 테이블의 행도 출력) <br>
 
@@ -148,6 +166,8 @@ left outer join buytbl B		-- right table
 on U.userid = B.userid;
 ```
 
+<hr>
+
 * Right Outer Join(on 조건을 만족하지 않는 right 테이블의 행도 출력) <br>
 
 ### ex) <br>
@@ -160,6 +180,8 @@ right outer join usertbl U		-- right table
 on U.userid = B.userid;
 ```
 
+<hr>
+
 * Full Outer Join(on조건을 만족하지 않는 left, right 테이블의 행도 출력) <br>
 
 > mysql 에서는 full outer join을 지원하지 않는다. <br>
@@ -169,6 +191,8 @@ on U.userid = B.userid;
 select * from usertbl left outer join buytbl on usertbl.userid = buytbl.userid 
 union
 select * from usertbl right outer join buytbl on usertbl.userid = buytbl.userid;
+
+<hr>
 
 ## 1-4. 여러 테이블들을 JOIN <br>
 
