@@ -64,7 +64,7 @@ on usertbl.userid = buytbl.userid;
 <hr>
 
 
-* INNER JOIN 원하는 열만 출력(열이름 중복시 특정 테이블의 열이름으로 선택해서 지정한다. ex) select usertbl.useid, ...) <br>
+### INNER JOIN 원하는 열만 출력(열이름 중복시 특정 테이블의 열이름으로 선택해서 지정한다. ex) select usertbl.useid, ...) <br>
 
 ### ex) <br>
 
@@ -78,7 +78,7 @@ on usertbl.userid = buytbl.userid;
 <hr>
 
 
-* INNER JOIN (별칭지정) <br>
+### INNER JOIN (별칭지정) <br>
 
 ### ex) <br>
 
@@ -93,7 +93,7 @@ on U.userid = B.userid;
 <hr>
 
 
-* WHERE 조건절 적용 <br>
+### WHERE 조건절 적용 <br>
 
 ```
 SELECT 열 목록
@@ -116,7 +116,7 @@ where amount <= 5;
 <hr>
 
 
-* 문제 <br>
+### 문제 <br>
 
 ```
 -- 1. 바비킴의 userid, birthyear, prodname, groupname 출력
@@ -154,7 +154,7 @@ WHERE 검색 조건      -> 생략가능
 
 <hr>
 
-* left Outer Join(on 조건을 만족하지 않는 left 테이블의 행도 출력) <br>
+### left Outer Join(on 조건을 만족하지 않는 left 테이블의 행도 출력) <br>
 
 ### ex) <br>
 
@@ -168,7 +168,7 @@ on U.userid = B.userid;
 
 <hr>
 
-* Right Outer Join(on 조건을 만족하지 않는 right 테이블의 행도 출력) <br>
+### Right Outer Join(on 조건을 만족하지 않는 right 테이블의 행도 출력) <br>
 
 ### ex) <br>
 
@@ -182,7 +182,7 @@ on U.userid = B.userid;
 
 <hr>
 
-* Full Outer Join(on조건을 만족하지 않는 left, right 테이블의 행도 출력) <br>
+### Full Outer Join(on조건을 만족하지 않는 left, right 테이블의 행도 출력) <br>
 
 > mysql 에서는 full outer join을 지원하지 않는다. <br>
 > 대신 union을 사용해서 left, right outer join을 연결한다. <br>
