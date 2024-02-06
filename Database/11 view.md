@@ -115,6 +115,8 @@ drop view 뷰이름
 
 -> view가 삭제된다고 해서 바라보고 있는 테이블이 삭제되는 것은 아님
 
+<hr>
+
 * 문제 <br>
   
 > classicmodels 에서 product, orderdetails, orders에 대한 관계도를 확인해서 <br>
