@@ -64,7 +64,7 @@ on usertbl.userid = buytbl.userid;
 <hr>
 
 
-* ### INNER JOIN 원하는 열만 출력(열이름 중복시 특정 테이블의 열이름으로 선택해서 지정한다. ex) select usertbl.useid, ...) <br>
+### INNER JOIN 원하는 열만 출력(열이름 중복시 특정 테이블의 열이름으로 선택해서 지정한다. ex) select usertbl.useid, ...) <br>
 
 ### ex) <br>
 
