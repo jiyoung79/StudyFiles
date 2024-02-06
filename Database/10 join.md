@@ -187,10 +187,13 @@ on U.userid = B.userid;
 > mysql 에서는 full outer join을 지원하지 않는다. <br>
 > 대신 union을 사용해서 left, right outer join을 연결한다. <br>
 
+### ex) <br>
 
+```
 select * from usertbl left outer join buytbl on usertbl.userid = buytbl.userid 
 union
 select * from usertbl right outer join buytbl on usertbl.userid = buytbl.userid;
+```
 
 <hr>
 
