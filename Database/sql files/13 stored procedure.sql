@@ -236,45 +236,70 @@ call proc_while_4(3);
 delimiter $$
 create procedure proc_while_5(in n int, in m int)
 begin
+	declare i int;
     declare sum int;
+	declare tmp int;
+    if(n > m)
+		then
+			set tmp = n;
+            set n = m;
+            set m = tmp;
+	end if;
+    
+    set i = n;
     set sum = 0;
-    while n < m do
-		set sum = sum + n;
-		set n = m + 1;
-        set sum = sum + m;
-		set m = n + 1;
+    
+    while i<=m do
+		set sum = sum + i;
+		set i = i + 1;
 	end while;
     select sum;
 
 end $$
 delimiter ;
 
--- 구구단 2단
+call proc_while_5(3,7);
+
+-- 2단
+create table tbl_googoodan(
+	dan int , 
+    i int , 
+    result int
+);
+select * from tbl_googoodan;
 delimiter $$
-create procedure proc_2(in i int)
-begin
-	declare i int;
+create procedure while02()
+begin 
+    declare i int ;
+    set i = 1;
     
+    while i<10 do
+		insert into tbl_googoodan values(2, i, 2*i);
+		set i = i+1;
+    end while;
+    select * from tbl_googoodan;
 end $$
 delimiter ;
+call while02();
 
+-- N단
+create table googoodan(
+	dan int , 
+    i int , 
+    result int
+);
+delimiter $$
+create procedure while03(in n int)
+begin 
+    declare i int ;
+    set i = 1;
 
--- 구구단 N단 출력(N<=9)
- delimiter $$
- create procedure proc_3(in i int, in k int)
- begin
-	declare i int;
-    declare k int;
-    set i = 2;
-    
-	while i<10 do
-		set k =1;
-        while (k<10) do
-			set k = k+1;
-		end while;
-        set i = i+1;
-	end while;
- end $$
- delimiter ;
- 
- call proc_3(3,5);
+    while i<10 do
+		insert into googoodan values(n,i,n*i);
+		set i = i+1;
+    end while;
+    select * from googoodan;
+end $$
+delimiter ;
+call while03(7);
+select * from googoodan;
