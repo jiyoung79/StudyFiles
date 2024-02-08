@@ -9,6 +9,8 @@
 
 > 예외처리와 함께 사용된다. <br>
 
+<hr>
+
 ### 1-1. Transaction의 성질 <br>
 
 * 원자성(Atomicity) <br>
