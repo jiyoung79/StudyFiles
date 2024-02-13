@@ -12,13 +12,21 @@
 
 ## 02. Alert <br>
 
+ <br>
+
 * ``` <button onclick="alert()"></button> ``` <br>
 
+ <br>
+ 
   > 눌렀을 때 나오는 경고창 <br>
 	> alert()안에 문자열, 연산처리, 이스케이프 문자 삽입 가능 <br>
 
+ <br>
+ 
  ![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/e8e52f61-7c9d-4cb9-91a5-8971cbd67dd7)
 
+ <br>
+ 
  * 결과
 
 <img src="https://github.com/jiyoung79/StudyFiles/assets/155033243/6b25c0a8-ad06-4926-9e16-0204a2631f84" width="300" height="120"/> |
@@ -26,13 +34,20 @@
 <img src="https://github.com/jiyoung79/StudyFiles/assets/155033243/2dc7807e-118f-4ad2-9ced-dca0262cbdbd" width="300" height="120"/>
 
 <hr>
+<br>
 
 * ``` <a href="javascript:()"></a> ```  <br>
 
+ <br>
+ 
 ![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/42cada76-3ffb-4410-b2c9-6f6629e886fd)
 
+ <br>
+ 
 > 버튼02는 결과가 나오지 않음 <br>
 
+ <br>
+ 
 * 결과
 
 <img src="https://github.com/jiyoung79/StudyFiles/assets/155033243/aa8bfdac-7bb9-494b-a79d-900a70e9ef92" width="300" height="120"/> |
@@ -41,6 +56,7 @@
 > 여기서 obj는 <br>
 ![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/b97002f7-57f8-4c59-a89a-884189a163fc)
 
+<br>
 <hr>
 
 
