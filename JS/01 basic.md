@@ -9,3 +9,12 @@
 > 자바스크립트는 HTML의 내용을 변경할수도 있고, 속성과 스타일도 변경이 가능하다.
 
 <hr>
+
+## 02. Alert <br>
+
+* <button onclick="alert()"></button> <br>
+  > 눌렀을 때 나오는 경고창 <br>
+	> alert()안에 문자열, 연산처리, 이스케이프 문자 삽입 가능 <br>
+
+ ![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/e8e52f61-7c9d-4cb9-91a5-8971cbd67dd7)
+
