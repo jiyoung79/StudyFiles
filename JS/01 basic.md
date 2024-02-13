@@ -25,6 +25,25 @@
 <img src="https://github.com/jiyoung79/StudyFiles/assets/155033243/0ce69600-0756-4046-99fd-4c49e4ec795c" width="300" height="120"/> |
 <img src="https://github.com/jiyoung79/StudyFiles/assets/155033243/2dc7807e-118f-4ad2-9ced-dca0262cbdbd" width="300" height="120"/>
 
+<hr>
+
+* ``` <a href="javascript:()"></a> ```  <br>
+
+![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/42cada76-3ffb-4410-b2c9-6f6629e886fd)
+
+> 버튼02는 결과가 나오지 않음 <br>
+
+> 결과
+
+<img src="https://github.com/jiyoung79/StudyFiles/assets/155033243/aa8bfdac-7bb9-494b-a79d-900a70e9ef92" width="300" height="120"/> |
+<img src="https://github.com/jiyoung79/StudyFiles/assets/155033243/c3c4d6a1-f2af-45a8-850a-37232091b8bb" width="300" height="120"/> 
+
+> 여기서 obj는
+![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/b97002f7-57f8-4c59-a89a-884189a163fc)
+
+
+
+
 ## 03. Script <br>
 
 > <script> 태그를 이용하면 자바스크립트 프로그램을 HTML 문서 대부분의 위치에 삽입할 수 있다. <br>
