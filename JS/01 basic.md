@@ -19,7 +19,7 @@
 
  ![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/e8e52f61-7c9d-4cb9-91a5-8971cbd67dd7)
 
- > 결과
+ * 결과
 
 <img src="https://github.com/jiyoung79/StudyFiles/assets/155033243/6b25c0a8-ad06-4926-9e16-0204a2631f84" width="300" height="120"/> |
 <img src="https://github.com/jiyoung79/StudyFiles/assets/155033243/0ce69600-0756-4046-99fd-4c49e4ec795c" width="300" height="120"/> |
@@ -33,7 +33,7 @@
 
 > 버튼02는 결과가 나오지 않음 <br>
 
-> 결과
+* 결과
 
 <img src="https://github.com/jiyoung79/StudyFiles/assets/155033243/aa8bfdac-7bb9-494b-a79d-900a70e9ef92" width="300" height="120"/> |
 <img src="https://github.com/jiyoung79/StudyFiles/assets/155033243/c3c4d6a1-f2af-45a8-850a-37232091b8bb" width="300" height="120"/> 
