@@ -21,9 +21,9 @@
 
  > 결과
 
-<img src="https://github.com/jiyoung79/StudyFiles/assets/155033243/6b25c0a8-ad06-4926-9e16-0204a2631f84" width="300" height="200"/> |
-<img src="https://github.com/jiyoung79/StudyFiles/assets/155033243/0ce69600-0756-4046-99fd-4c49e4ec795c" width="300" height="200"/> |
-<img src="https://github.com/jiyoung79/StudyFiles/assets/155033243/2dc7807e-118f-4ad2-9ced-dca0262cbdbd" width="300" height="200"/>
+<img src="https://github.com/jiyoung79/StudyFiles/assets/155033243/6b25c0a8-ad06-4926-9e16-0204a2631f84" width="300" height="150"/> |
+<img src="https://github.com/jiyoung79/StudyFiles/assets/155033243/0ce69600-0756-4046-99fd-4c49e4ec795c" width="300" height="150"/> |
+<img src="https://github.com/jiyoung79/StudyFiles/assets/155033243/2dc7807e-118f-4ad2-9ced-dca0262cbdbd" width="300" height="150"/>
 
 
 
