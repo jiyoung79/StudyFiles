@@ -78,7 +78,7 @@
 
 ![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/2e25d3fa-d50f-4e33-ba15-298da3135fe7)
 
-> 이 때, defer : body에 있는 것들(html의 구조)을 실행하고 나서 js를 실행한다. <br>
+> 이 때, defer의 역할은 body에 있는 것들(html의 구조)을 실행하고 나서 js를 실행 <br>
 
 
 
