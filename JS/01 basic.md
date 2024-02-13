@@ -25,7 +25,15 @@
 <img src="https://github.com/jiyoung79/StudyFiles/assets/155033243/0ce69600-0756-4046-99fd-4c49e4ec795c" width="300" height="120"/> |
 <img src="https://github.com/jiyoung79/StudyFiles/assets/155033243/2dc7807e-118f-4ad2-9ced-dca0262cbdbd" width="300" height="120"/>
 
+## 03. Script <br>
 
+> <script> 태그를 이용하면 자바스크립트 프로그램을 HTML 문서 대부분의 위치에 삽입할 수 있다. <br>
+	
+> 웹 페이지에 자바스크립트 코드를 추가하기 위해 <script> 태그를 사용 <br>
+	
+> type 과 language 속성은 필수가 아님 <br>
+
+> 외부 스크립트 파일은 <script src="path/to/script.js"></script>와 같이 삽입 <br>
 
 
 
