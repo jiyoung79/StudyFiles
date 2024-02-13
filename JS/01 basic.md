@@ -72,6 +72,18 @@
 
 * <script> 태그 이용 시 주의할 점
 
+> body 안에 <script> 태그를 넣으면 절차지향이기 때문에 실행이 되지 않을 수 있음. (마지막에 넣어야함) <br>
+
+> 이를 해소하기 위해서는 head에 <script> 태그를 넣는다 <br>
+
+![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/2e25d3fa-d50f-4e33-ba15-298da3135fe7)
+
+> 이 때, defer : body에 있는 것들(html의 구조)을 실행하고 나서 js를 실행한다. <br>
+
+
+
+
+
 
 
 
