@@ -12,7 +12,7 @@
 
 ## 02. Alert <br>
 
-* <button onclick="alert()"></button> <br>
+* ``` <button onclick="alert()"></button> ``` <br>
 
   > 눌렀을 때 나오는 경고창 <br>
 	> alert()안에 문자열, 연산처리, 이스케이프 문자 삽입 가능 <br>
