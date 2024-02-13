@@ -13,7 +13,7 @@ getElementsByClassName() : 특정 클래스명을 가진 모든 태그 컬렉션
 
 open() : 콘텐츠를 모두 지우고 새로운 HTMl 콘텐츠를 쓸 수 있도록 열기
 
-write(), writeln() : document에 HTML 콘텐츠 삽입. ln이 붙은 건 write() 후 '\n' 추가출력(브라우저 상에는 빈칸 하나)
+write(), writeln() : document에 HTML 콘텐츠 삽입. ln이 붙은 건 write() 후 '\n' 추가출력(브라우저 상에는 빈칸 하나) 줄바꿈하려면 '<br>'을 써야함
 
 close() : document 객체에 있는 HTML 콘텐츠를 브라우저에 출력하고, 더이상 쓰기를 받지 않음
 ```
