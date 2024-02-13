@@ -38,10 +38,10 @@
 <img src="https://github.com/jiyoung79/StudyFiles/assets/155033243/aa8bfdac-7bb9-494b-a79d-900a70e9ef92" width="300" height="120"/> |
 <img src="https://github.com/jiyoung79/StudyFiles/assets/155033243/c3c4d6a1-f2af-45a8-850a-37232091b8bb" width="300" height="120"/> 
 
-> 여기서 obj는
+> 여기서 obj는 <br>
 ![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/b97002f7-57f8-4c59-a89a-884189a163fc)
 
-
+<hr>
 
 
 ## 03. Script <br>
@@ -53,6 +53,10 @@
 > type 과 language 속성은 필수가 아님 <br>
 
 > 외부 스크립트 파일은 <script src="path/to/script.js"></script>와 같이 삽입 <br>
+
+* <script> 태그 이용 시 주의할 점
+
+
 
 
 
