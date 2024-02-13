@@ -20,9 +20,11 @@ close() : document 객체에 있는 HTML 콘텐츠를 브라우저에 출력하�
 
 <hr>
 
-## 01. document.write 함수 <br>
+## 01. document.write() <br>
 
 > 말 그대로 괄호 안에 들어가있는 것을 페이지에 "쓰는(출력하는)" 함수 <br>
+
+<br>
 
 * 예시 <br>
 
@@ -41,4 +43,32 @@ close() : document 객체에 있는 HTML 콘텐츠를 브라우저에 출력하�
 ![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/4469e2be-2749-4d88-bd73-f9bb0cafdce1)
 
 <hr>
+
+## 02. getElementById() <br>
+
+* 구조
+
+``` document.getElementById(elementID1); ``` 
+
+> elementID1은 매개변수이며 필수 입력 값, 이는 검색하려는 요소의 id 속성 값이다. 자료형은 문자열 타입만 허용 <br>
+> 검색에 실패할 경우 null을 출력한다. <br>
+
+<br>
+
+* 예시 <br>
+
+![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/328ab06d-29a3-404d-a2f2-3ab87cef03c7)
+
+* 결과 <br>
+
+![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/9e861a16-46da-450f-ab38-6702b69d820d)
+
+> 버튼을 누르면 <br>
+
+![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/c83d0a7e-8b12-46ae-9071-1c1aa57a62f1)
+
+
+
+
+
 
