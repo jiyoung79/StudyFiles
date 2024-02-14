@@ -14,13 +14,13 @@
 
 > {} : 객체, this. : 현재 만들어진 객체 자체에 있는 속성을 가지고 오기 위한 것
 > 주석처리 한 것에 들어있는 것은 버튼으로 만들기 전 콘솔창에 표시하기위해 만들었던 함수들이다.
->  ```
->  tori.name = "뽀삐"; // 이름 바꾸기
-   console.log(typeof tori);
-   console.log(tori.name+"," + tori.kind+"," + tori.age);
-   tori.sound();
-   tori.toString();
-    ```
+```
+tori.name = "뽀삐";        => 이름이 뽀삐로 바뀐다.
+console.log(typeof tori);         => 콘솔창에 뽀삐의 자료형이 표시된다. (object)
+console.log(tori.name+"," + tori.kind+"," + tori.age);         => 콘솔창에 '뽀삐,포메라니안,1' 이라고 표시된다. (위에서 이름을 뽀삐로 바꿔서 토리라 뜨지 않음)
+tori.sound();         => 콘솔창에 '뽀삐이(가) 왕왕 짖습니다.' 라고 표시된다.
+tori.toString();         => 콘솔창에 '뽀삐,포메라니안,1' 이라고 표시된다.
+ ```
 
 <br>
 
@@ -30,15 +30,21 @@
 
 > 라는 알림이 뜨고 <br>
 
+<br>
+
 ![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/d5f36e91-6e36-47ff-bb9d-e6d31954d2c3)
 
 > 콘솔창에는 위와 같이 표시된다. <br>
+
+<br>
 
 * 결과 - 버튼 : 정보확인 을 클릭했을 때 <br>
 
 ![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/83093432-332b-4fc1-8206-b8616fec855c)
 
 > 라는 알림이 뜨고 <br>
+
+<br>
 
 ![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/2bde01e8-677d-4c8e-897b-b2aaf530cdd0)
 
