@@ -1,8 +1,8 @@
-## 배열관련 함수(메서드) <br>
+# 배열관련 함수(메서드) <br>
 
 <br>
 
-* 예시 1 - JS배열은 동적확장이 가능하다. <br>
+* 예제 1 - JS배열은 동적확장이 가능하다. <br>
 
 ![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/a6c68601-a872-43eb-bf7a-b0c79d76a687)
 
@@ -26,7 +26,7 @@ arr[8] = {owner:'강지영', model:'투싼'};
 <br>
 <hr>
 
-* 예시 2 - 요소탐색(반복문) <br>
+* 예제 2 - 요소탐색(반복문) <br>
 
 > 먼저 요소탐색 반복문의 기본 구조는 ``` for(초기값; 조건식; 탈출연산){} ``` 이다. <br>
 
@@ -47,7 +47,7 @@ arr[8] = {owner:'강지영', model:'투싼'};
 
 <br>
 
-* 예시 <br>
+* 예제 <br>
 
 ![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/6b67d2df-2112-40df-9e51-a89103fcf190)
 
@@ -71,7 +71,7 @@ push로 끝에 요소를 추가하였기 때문에 추가 후 총 배열의 길�
 
 > 배열의 마지막 요소를 제거한 후, 제거한 요소를 반환한다. <br>
 
-* 예시 <br>
+* 예제 <br>
 
 ![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/8bb33503-b3d4-4280-8e8f-da1bd4d21255)
 
@@ -99,7 +99,7 @@ let arr = ['a', 'b', null, 'true', 30, 50.5, {name : '홍길동', age : 55}]; �
 ``` function(){} == ()=>{} ``` <br>
 ``` arr.forEach((요소)=>{처리되는 로직}); ```
 
-* 예시 <br>
+* 예제 <br>
 
 ![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/e293c5cb-057c-48c6-ac4c-7db660344867)
 
@@ -114,9 +114,61 @@ let arr = ['a', 'b', null, 'true', 30, 50.5, {name : '홍길동', age : 55}]; �
 
 ## 4. Sort <br>
 
+> 배열을 정열하기 위한 함수 <br>
 > 기본 sort 함수는 요소를 문자열로 변환 이후 사전편찬순서대로 오름차순 정렬 <br>
+
+```
+배열이름.sort((a,b)=>{
+            return a-b;         // 오름차순
+            // return b-a;      => 내림차순
+        });         
+```
 
 <br>
 
-* 예시 <br>
+* 예제 <br>
+
+![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/0c1d6e53-a212-4cb8-bc81-3fefa765c221)
+
+<br>
+
+* 결과 <br>
+
+![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/8db9d930-3ea5-465c-91d4-39ea7cd00b63)
+
+```
+arr2 에서 배열의 element들은 문자열로 취급되어, 유니코드 값 순서대로 정렬된다.
+arr3에서는 item에 따로 조건을 두지 않았기 때문에 foreach로 불러왔을 때 모두 나타난다.
+그리고 return a-b가 사용되었기 때문에 오름차순으로 정렬된다.
+```
+
+<br>
+<hr>
+
+## 5. Filter <br>
+
+> 조건식을 만족하는 요소만 필터링해서 따로 배열에 저장한다.<br>
+> 배열에서만 쓸 수 있다.<br>
+
+<br>
+
+* 예제 <br>
+
+![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/6eb076aa-5121-42eb-908d-aba96e286199)
+
+<br>
+
+* 결과 <br>
+
+![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/24101b82-aeca-4b90-b2b0-8d22ff9d6869)
+
+```
+let filteredArr는 arr4에서 자료형이 object에 해당되는 것들을 배열로 만든다.
+typeof item == 'object' 는 {name : '스몰더', age : 99}, null, {name : '티모', age : 555} 를 뜻하기 때문에
+console.log로 불러왔을 때 위의 세개가 출력된다.
+ let FA는 arr4에서 자료형이 number에 해당되는 것들을 배열로 만든다.
+typeof item == 'number'는 10, 15.2, 1, 99, 160 을 뜻한다.
+그리고 sort를 통해 오름차순으로 정렬하여 foreach로 출력되어서 콘솔창에는 위와 같이 출력된다.
+```
+
 
