@@ -43,3 +43,5 @@
  
 ![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/35762e95-9406-4452-86a1-071b41a318d5)
 
+> 1 + 2 + 3 + 123 = 129
+
