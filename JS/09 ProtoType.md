@@ -54,10 +54,30 @@
 
 ![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/900c776e-d93d-4b6c-aad7-9cb12248e627)
 
+<br>
+<hr>
 
+* 예제 - 2 ProtoType 상속 <br>
 
+![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/c112d60f-ea50-4114-9273-f73ee9f348a0)
 
+<br>
 
+* 결과 <br>
+
+![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/254a1dac-6c9e-4b32-b72a-07b0c83843e8)
+
+* 예제 - 2 ProtoType 상속(2) <br>
+
+> 같은 상위프로토타입 생성자를 불러옴
+
+![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/18c32def-778a-4d78-9993-a476d6511111)
+
+<br>
+
+* 결과 <br>
+
+![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/d441bcb4-929b-4866-a6eb-089631a6d62e)
 
 
 
