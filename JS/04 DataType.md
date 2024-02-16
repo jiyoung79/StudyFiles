@@ -1,5 +1,20 @@
 [참고자료](https://ko.javascript.info/type-conversions)
 
+# 형변환 <br>
+
+> 함수와 연산자에 전달되는 값은 대부분 적절한 자료형으로 자동 변환됨 <br>
+
+> alert가 전달받은 값의 자료형과 관계없이 이를 문자열로 자동 변환하여 보여주는 것이나, 수학 관련 연산자가 전달받은 값을 숫자로 변환하는 경우가 형 변환의 대표적인 예시이다. <br>
+
+> 이 외에, 전달받은 값을 의도를 갖고 원하는 타입으로 변환(명시적 변환)해 주는 경우도 형 변환이라고 할 수 있다. <br>
+
+### 숫자형으로 변환 시 적용되는 규칙 <br>
+
+* undefined	      : NaN <br>
+* null	          : 0 <br>
+* true and false	: 1 과 0 <br>
+* string	        : 문자열의 처음과 끝 공백이 제거 / 공백 제거 후 남아있는 문자열이 없다면 0, 그렇지 않다면 문자열에서 숫자를 읽음. 변환에 실패하면 NaN이 됨 <br>
+
 ## 1. Number : 수(정수/실수) <br>
 
 - Number.MAX_VALUE보다 큰 양수값은 +Infinity로 변환된다. <br>
@@ -50,7 +65,6 @@
 
 ![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/630c8c12-df2d-47df-8729-8506a780d7c6)
 
-
 <br>
 <hr>
 
@@ -61,10 +75,13 @@
 
 * 예제 <br>
 
+![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/7f3b66ad-2b62-44d8-9faf-efa5595f9179)
 
 <br>
 
 * 결과 <br>
+
+![image](https://github.com/jiyoung79/StudyFiles/assets/155033243/ba55001f-f3e8-4a57-8e38-e7862dc0e534)
 
 <br>
 <hr>
